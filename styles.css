@@ -20,6 +20,14 @@ html {
     text-decoration: none;
 }
 
+.homepage {
+    height: 477px;
+    width: 800px;
+    background-image: url('./image.png');
+    /* 1280x763 */
+    background-size: 800px 477px;
+}
+
 .bottombar {
     height: 60px;
     left: 0;
