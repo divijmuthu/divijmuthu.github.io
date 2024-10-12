@@ -21,11 +21,28 @@ html {
 }
 
 .homepage {
-    height: 477px;
-    width: 800px;
+    color: rgb(225, 225, 93);
+    height: 596px;
+    width: 1000px;
     background-image: url('./image.png');
     /* 1280x763 */
-    background-size: 800px 477px;
+    background-size: 1000px 596px;
+}
+
+#mypic {
+    position: absolute;
+    top: 100px;
+    left: 750px;
+    height: 200px;
+    width: 180px;
+    border-radius: 50%;
+    border: inset 5px rgb(202, 202, 176);
+}
+
+#camp {
+    position: absolute;
+    top: 350px;
+    left: 250px;
 }
 
 .bottombar {
