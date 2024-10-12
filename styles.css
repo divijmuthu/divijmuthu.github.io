@@ -3,8 +3,10 @@ html {
 }
 
 .topnavbar {
+    height: 60px;
     background-color: rgb(48, 48, 234);
     position: fixed;
+    left: 0;
     top: 0;
     width: 100%;
 }
@@ -14,15 +16,26 @@ html {
     display: block;
     color: rgb(225, 225, 93);
     text-align: center;
-    padding: 10px;
+    padding: 7px;
     text-decoration: none;
 }
 
 .bottombar {
+    height: 60px;
+    left: 0;
     background-color: rgb(225, 225, 93);
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.bottombar p {
+    float: left;
+    display: block;
+    color: rgb(48, 48, 234);
+    text-align: center;
+    padding: 7px;
+    text-decoration: none;
 }
 
 .main {
