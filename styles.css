@@ -1,3 +1,21 @@
 html {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+.navbar {
+    background-color: rgb(48, 48, 234);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.bottombar {
+    background-color: rgb(225, 225, 93);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.main {
+    margin-bottom: 30px; 
+}
