@@ -2,11 +2,20 @@ html {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.navbar {
+.topnavbar {
     background-color: rgb(48, 48, 234);
     position: fixed;
     top: 0;
     width: 100%;
+}
+
+.topnavbar p {
+    float: left;
+    display: block;
+    color: rgb(225, 225, 93);
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
 }
 
 .bottombar {
@@ -17,5 +26,6 @@ html {
 }
 
 .main {
-    margin-bottom: 30px; 
+    margin-top: 70px;
+    margin-bottom: 70px; 
 }
