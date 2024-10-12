@@ -18,6 +18,7 @@ html {
     text-align: center;
     padding: 7px;
     text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .homepage {
@@ -59,12 +60,74 @@ html {
 }
 
 .proj-item {
-    border: 6px solid rgb(208, 129, 11);
+    border: 6px ridge rgb(208, 129, 11);
+    margin: 7px;
     color:rgb(96, 206, 114);
     text-align: left;
     width: 300px;
     border-radius: 15px;
     background-color: navy;
+}
+
+.proj-item h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.proj-item img {
+    width: 250px;
+    height: 150px;
+    
+}
+
+.contactspage {
+    height: 400px;
+    width: 900px;
+    background-color: rgb(9, 109, 9);
+}
+
+.hi-and-pic {
+    width: 350px;
+    float: left;
+    height: 370px;
+    margin: 10px;
+    color: white;
+    background-color: rgb(16, 51, 156);
+    border: inset 5px aquamarine;
+    text-align: center;
+}
+
+#mypic2 {
+    height: 200px;
+    width: 180px;
+    border-radius: 50%;
+    border: inset 5px rgb(229, 229, 15);
+}
+
+.contactinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 400px;
+    float: left;
+    padding: 10px;
+    background-color: rgb(9, 109, 9);
+}
+
+.contactitem {
+    border: 6px ridge rgb(10, 181, 219);
+    margin: 10px;
+    color:rgb(0, 0, 0);
+    text-align: left;
+    padding: 5px;
+    width: 400px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: rgb(165, 165, 193);
+}
+
+.contacts-logo {
+    width: 70px;
+    height: 60px;
 }
 
 .bottombar {
@@ -83,6 +146,7 @@ html {
     text-align: center;
     padding: 7px;
     text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .main {
