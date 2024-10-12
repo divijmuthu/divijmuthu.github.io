@@ -45,6 +45,28 @@ html {
     left: 250px;
 }
 
+.titlechunk {
+    height: 40px;
+    width: 1000px;
+    background-color: rgb(225, 225, 93);
+}
+
+.projcontainer {
+    display: flex;
+    gap: 3%;
+    justify-content: start;
+    background-color: rgb(133, 24, 24);
+}
+
+.proj-item {
+    border: 6px solid rgb(208, 129, 11);
+    color:rgb(96, 206, 114);
+    text-align: left;
+    width: 300px;
+    border-radius: 15px;
+    background-color: navy;
+}
+
 .bottombar {
     height: 60px;
     left: 0;
