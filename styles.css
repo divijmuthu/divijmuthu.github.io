@@ -30,6 +30,12 @@ html {
     background-size: 1000px 596px;
 }
 
+.homepage p {
+    position: absolute;
+    top: 100px;
+    left: 360px;
+}
+
 #mypic {
     position: absolute;
     top: 100px;
@@ -67,6 +73,12 @@ html {
     width: 300px;
     border-radius: 15px;
     background-color: navy;
+    transition-duration: 1s;
+}
+
+.proj-item:hover {
+    background-color: purple;
+    transition-duration: 1s;
 }
 
 .proj-item h3 {
@@ -92,7 +104,7 @@ html {
     margin: 10px;
     color: white;
     background-color: rgb(16, 51, 156);
-    border: inset 5px aquamarine;
+    border: inset 5px rgb(10, 181, 219);
     text-align: center;
 }
 
@@ -118,15 +130,34 @@ html {
     margin: 10px;
     color:rgb(0, 0, 0);
     text-align: left;
+    font-size: 35px;
     padding: 5px;
     width: 400px;
     height: 70px;
     border-radius: 10px;
     background-color: rgb(165, 165, 193);
+    transition-duration: 1s;
 }
 
-.contacts-logo {
-    width: 70px;
+.contactitem:hover {
+    background-color: lightcoral;
+    transition-duration: 1s;
+}
+
+#logo1 {
+    width: 80px;
+    height: 70px;
+}
+
+#logo2 {
+    padding: 2px;
+    width: 67px;
+    height: 65px;
+}
+
+#logo3 {
+    padding: 3px;
+    width: 80px;
     height: 60px;
 }
 
