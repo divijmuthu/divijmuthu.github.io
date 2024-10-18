@@ -91,6 +91,81 @@ html {
     
 }
 
+.interests-container {
+    display: flex;
+    justify-content: start;
+    gap: 3%;
+    background-color: white;
+    height: 325px;
+}
+
+.interests-container-one {
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    background-color: white
+}
+
+.interests-container-two {
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    background-color: white
+}
+
+.interests-container-three {
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    justify-content: start;
+    background-color: white
+}
+
+.interests-item-one {
+    padding: 10px;
+    border: greenyellow 5px ridge;
+    text-align: center;
+    background-color: navy;
+    color: white;
+    border-radius: 8px;
+    transition-duration: 1s;
+}
+
+.interests-item-one:hover {
+    opacity: 0.7;
+    transition-duration: 1s;
+}
+
+.interests-item-two {
+    padding: 10px;
+    border: orange 5px ridge;
+    text-align: center;
+    background-color: rgb(19, 175, 19);
+    color: black;
+    border-radius: 8px;
+    transition-duration: 1s;
+}
+
+.interests-item-two:hover {
+    opacity: 0.7;
+    transition-duration: 1s;
+}
+
+.interests-item-three {
+    padding: 10px;
+    border: pink 5px ridge;
+    text-align: center;
+    background-color: green;
+    color: white;
+    border-radius: 8px;
+    transition-duration: 1s;
+}
+
+.interests-item-three:hover {
+    opacity: 0.7;
+    transition-duration: 1s;
+}
+
 .contactspage {
     height: 400px;
     width: 900px;
