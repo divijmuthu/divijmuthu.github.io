@@ -96,7 +96,7 @@ html {
     justify-content: start;
     gap: 3%;
     background-color: white;
-    height: 325px;
+    height: auto;
 }
 
 .interests-container-one {
