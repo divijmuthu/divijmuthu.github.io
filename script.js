@@ -27,7 +27,7 @@ let mlInterest = document.getElementById("mlinterest")
 
 mlInterest.addEventListener("click", function() {
     let image = document.createElement("img")
-    image.src = "/Users/deepshikhakaul/Documents/GitHub/divijmuthu.github.io/mlimage.png"
+    image.src = "./mlimage.png"
     image.width = 200
     image.height = 150
     mlInterest.appendChild(image)
@@ -36,8 +36,8 @@ mlInterest.addEventListener("click", function() {
 })
 
 let educAnim = document.getElementById("education-anim-button")
-let educPics = ["/Users/deepshikhakaul/Documents/GitHub/divijmuthu.github.io/7DF5041B-51B9-42FA-9D6C-1F8866C40D2E_1_201_a-900x674.jpeg",
-    "/Users/deepshikhakaul/Documents/GitHub/divijmuthu.github.io/CA_Berkeley_UniversityOfCaliforniaAtBerkeley_byCharlieNguyen-Flickr_2008_001_Sig.jpg"
+let educPics = ["./7DF5041B-51B9-42FA-9D6C-1F8866C40D2E_1_201_a-900x674.jpeg",
+    "./CA_Berkeley_UniversityOfCaliforniaAtBerkeley_byCharlieNguyen-Flickr_2008_001_Sig.jpg"
 ]
 let educInfo = ["Dublin High School", "UC Berkeley"]
 let count = 0
