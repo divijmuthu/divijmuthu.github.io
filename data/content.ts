@@ -196,7 +196,7 @@ export const content: Content = {
     {
       title: "Dispatch",
       type: "Game",
-      review: "The absolute GOAT.",
+      review: "Really enjoyed this one, the story is excellent and the character design is fantastic, so AdHoc Studio pretty much hit it out of the park when it comes to the most critical aspect of this type of game. The dispatching gameplay is great, it's a good blend of challenge and reward, although once you understand the synergy mechanic and get some decent levels + abilities you can basically just send certain pairs mindlessly and effectively be guaranteed a success (which is satisfying after so many fails!!!). The hacking is mediocre but not bad and an acceptable change of pace, the autofail mechanic is cool but probably should've been mentioned earlier before a first-timer puts too many points into strength across the overall team. As usual the choices don't really matter but this honestly works pretty well, it's the same strong core story with some fun choices sprinked throughout. The buildup throughout the story is fantastic, again it's just really good on this front and there's not too much to say. Overall a very strong new IP with huge potential, and the Youtuber VAs are great too.",
     },
     {
       title: "Pokemon Legends: Z-A",
@@ -206,12 +206,12 @@ export const content: Content = {
     {
       title: "Clair Obscur: Expedition 33",
       type: "Game",
-      review: "The absolute GOAT.",
+      review: "The absolute GOAT. This entire game is a work of art (spoiler but this is very literal), every character is compelling, every environment is insanely detailed and it's hard not to just pause and stare in awe at what Sandfall has created here. The gameplay is exactly what I've been looking for (see the M&L series discussion below) and this is one of the truly fantastic games where I'm glued to it for weeks and can't wait to play more. Will probably circle back to it for NG+ and the new update when the next Clair Obscur is announced, not surprised it swept the awards as it's a game you just have to experience. The game's at its best when it's capturing the fear of the unknown and you have no idea what's going on, learning about this massive world bit by bit alongside the Expeditioners is rewarding and deeply satisfying. Be prepared for strong emotional responses, this story is very visceral and intense, again not much to say other than it's a masterpiece. Like most Overwhelmingly Positive games I saw the vision from the very beginning with the Gommage and couldn't stop till I got to the end, Acts 1 and 2 are a fantastic story that will constantly drive you forwards to really understand what's going on in this world, and Act 3 was a little messy with respect to the best sequence to pursue the vast array of 'postgame' content, but it came together pretty nicely and led to a fantastic finish (couldn't really handle the superboss tho...everything else was great).",
     },
     {
       title: "Monster Hunter Stories",
       type: "Game",
-      review: "",
+      review: "Surprisingly great and got sucked into this one, it really is superior to modern Pokemon in a lot of ways BUT it struggles with something I think the Pokemon Legends games have done well, which is cycling new Pokemon consistently since the wild encounters are of a good enough or even higher level which justifies their addition to the team, making the party building process much more compelling. MHS was pretty strong in this regard but starting everything off at Level 1 kinda hurts. But of course I'm generally of the opinion that this game is a fantastic example of the 'creature capture' genre, and it was a great first experience with the MH franchise. All the monsters look awesome (which fits my personal taste a bit better than the wide variety of Pokemon which often have more cute or simplistic designs), and the story was pretty good, definitely better than a lot of the repetitive Pokemon narratives. Of course there's more to this than pure comparisons, the game stands out by merging traditional MH mechanics with a turn-based system and fighting alongside the monsters, which just radiates aura. In fact you need to acquire a lot of aura by acting in sync with your partner 'monstie' to execute the most powerful attacks. The huge cast of monsters from MH lore really shines here, and it makes this adventure a pleasure to see through (although like many RPGs it suffers from isolated postgame content that requires a dedicated grind to level up enough to enjoy)",
     },
     {
       title: "TLOZ: The Windwaker",
