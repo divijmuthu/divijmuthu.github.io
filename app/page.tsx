@@ -2,7 +2,7 @@ import Sidebar from "@/components/Sidebar";
 import ProjectCard from "@/components/ProjectCard";
 import ExperienceCard from "@/components/ExperienceCard";
 import Highlights from "@/components/Highlights";
-import Hobbies from "@/components/Hobbies";
+import MediaReviewCard from "@/components/MediaReviewCard";
 import { content } from "@/data/content";
 
 export default function Home() {
@@ -50,11 +50,15 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Hobbies Section */}
-          {content.profile.hobbies && content.profile.hobbies.length > 0 && (
-            <section id="hobbies" className="mb-12">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">Hobbies</h2>
-              <Hobbies hobbies={content.profile.hobbies} />
+          {/* Media Reviews Section */}
+          {content.mediaReviews && content.mediaReviews.length > 0 && (
+            <section id="media-reviews" className="mb-12">
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">Media Reviews</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                {content.mediaReviews.map((review, idx) => (
+                  <MediaReviewCard key={idx} review={review} />
+                ))}
+              </div>
             </section>
           )}
         </main>

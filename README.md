@@ -71,6 +71,22 @@ Edit `/data/content.ts` to update:
 - Research publications
 - Software projects
 - Social links
+- Media reviews (see `MEDIA_REVIEWS_GUIDE.md`)
+
+## SEO Optimization
+
+The site includes comprehensive SEO optimization:
+- **Meta Tags**: Title, description, keywords optimized for "Divij Muthu"
+- **Open Graph**: Social media sharing optimization
+- **Structured Data**: JSON-LD Person schema for Google Knowledge Graph
+- **Sitemap**: Auto-generated sitemap.xml
+- **Robots.txt**: Search engine crawling instructions
+
+To improve search visibility:
+1. Ensure your GitHub Pages site is public
+2. Submit sitemap to Google Search Console: `https://divijmuthu.github.io/sitemap.xml`
+3. Add your site to Google Search Console
+4. Share your site on LinkedIn and other profiles
 
 ## License
 

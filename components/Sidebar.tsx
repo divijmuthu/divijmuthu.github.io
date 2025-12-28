@@ -120,13 +120,13 @@ export default function Sidebar() {
                 Experience
               </button>
             </li>
-            {content.profile.hobbies && content.profile.hobbies.length > 0 && (
+            {content.mediaReviews && content.mediaReviews.length > 0 && (
               <li>
                 <button
-                  onClick={() => scrollToSection("hobbies")}
+                  onClick={() => scrollToSection("media-reviews")}
                   className="w-full text-left px-3 py-2 text-base text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded transition-colors"
                 >
-                  Hobbies
+                  Media Reviews
                 </button>
               </li>
             )}

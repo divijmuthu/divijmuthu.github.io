@@ -13,6 +13,15 @@ export interface Project {
   tags: string[];
 }
 
+export interface MediaReview {
+  title: string;
+  type: "Movie" | "TV Show" | "Book" | "Game" | "Album" | "Podcast" | "Band" | "Other";
+  icon?: string; // Path to icon/image
+  rating?: number; // 1-10 or 1-5 scale
+  review: string;
+  date?: string;
+}
+
 export interface Profile {
   name: string;
   tagline: string;
@@ -51,6 +60,7 @@ export interface Content {
   projects: Project[];
   experiences: Experience[];
   highlights: Highlight[];
+  mediaReviews: MediaReview[];
 }
 
 export const content: Content = {
@@ -170,6 +180,28 @@ export const content: Content = {
         url: "https://lukhanin.net/images/dmRice.jpeg",
       },
     },
+  ],
+  mediaReviews: [
+    // Add your media reviews here!
+    // Example format:
+    // {
+    //   title: "Movie/Show/Book Title",
+    //   type: "Movie", // Options: "Movie" | "TV Show" | "Book" | "Game" | "Album" | "Podcast" | "Other"
+    //   icon: "/images/media/placeholder.png", // Optional - place icons in /public/images/media/
+    //   rating: 8, // Optional - 1-10 scale
+    //   review: "Your review text here. Write as much as you want!",
+    //   date: "2025-01-15", // Optional
+    // },
+    {
+      title: "The Battle Cats",
+      type: "Game",
+      review: "Many MANY enjoyable hours in this game, went through a lot of mobile games back in the day and this is the one that stuck. Can effectively be played for free, especially with 'certain methods' of ensuring you can acquire good gacha units. The gameplay is simple and enjoyable, with surprising strategic depth involved in tailoring your loadout for each stage. SO SO MANY memorable bosses and stages whose names are infamous among the community, and practically infinite content; moved on after 100s of hrs and many years but there is still SO much more, probably never touching 4 crown UL tho. Some of the latest grinds are also concerning e.g. behemoth stones and dark catseyes, the fact that this mobile game managed to make such mechanics which AREN'T pay to win because you literally have to manually complete tons of stages for stones and can't even get more than a few catseyes period is kinda wild.",
+    },
+    {
+      title: "Sabaton",
+      type: "Band",
+      review: "Enjoyable music, historical themes are pretty cool and have taught me so much about specific heroes and events. Really complex themes, naturally, but the music goes hard and I think it's pretty respectful while acknowledging how messy history can be. Have been listening for quite a while now, in general probably the main standard band I listen to along with various video game soundtracks.",
+    }
   ],
 };
 
