@@ -49,10 +49,10 @@ export default function Sidebar() {
           <ul className="flex flex-col gap-2">
             <li>
               <button
-                onClick={() => scrollToSection("about")}
+                onClick={() => scrollToSection("highlights")}
                 className="w-full text-left px-3 py-2 text-sm text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded transition-colors"
               >
-                About
+                Highlights
               </button>
             </li>
             <li>

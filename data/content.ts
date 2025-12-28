@@ -35,11 +35,21 @@ export interface Experience {
   tags?: string[];
 }
 
+export interface Highlight {
+  date: string;
+  description: string;
+  link?: {
+    text: string;
+    url: string;
+  };
+}
+
 export interface Content {
   profile: Profile;
   research: Project[];
   projects: Project[];
   experiences: Experience[];
+  highlights: Highlight[];
 }
 
 export const content: Content = {
@@ -62,7 +72,7 @@ export const content: Content = {
       venue: "IEEE MEMS 2026 (Accepted, Oral Presentation)",
       description: "A novel system for 3D image reconstruction via ultrasound transducers and compressed sensing.",
       links: [
-        { name: "Paper", url: "https://drive.google.com/file/d/1vQMwxJSRwGlUDrlGdhpbOuK76OzTVRa2/view?usp=sharing" },
+        // { name: "Paper", url: "https://drive.google.com/file/d/1vQMwxJSRwGlUDrlGdhpbOuK76OzTVRa2/view?usp=sharing" },
         { name: "IEEE MEMS 2026", url: "https://mems26.org" },
       ],
       tags: ["Embedded Systems", "Signal Processing", "Compressed Sensing", "Convex Optimization", "Computational Imaging"],
@@ -139,6 +149,24 @@ export const content: Content = {
         "Reduced network latency for filtering by ~20% and improved application performance by implementing batch updates, local caching, and optimized data fetching strategies with RESTful APIs e.g. TMDB API for movie/show data.",
       ],
       tags: ["React Native", "TypeScript", "Firebase", "Google Cloud Platform", "Cloud Functions","XCode", "Android Emulator", "Jira"],
+    },
+  ],
+  highlights: [
+    {
+      date: "Oct, 2025",
+      description: "A paper was accepted for an oral presentation at ",
+      link: {
+        text: "MEMS26",
+        url: "https://mems26.org",
+      },
+    },
+    {
+      date: "Sept, 2025",
+      description: "Divij Muthu (undergrad) was accepted to give a talk at ",
+      link: {
+        text: "GCURS",
+        url: "https://lukhanin.net/images/dmRice.jpeg",
+      },
     },
   ],
 };
