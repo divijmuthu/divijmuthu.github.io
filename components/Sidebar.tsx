@@ -25,6 +25,7 @@ export default function Sidebar() {
             width={180}
             height={180}
             className="rounded-full border-4 border-slate-200 object-cover"
+            unoptimized
           />
         </div>
 
@@ -68,6 +69,14 @@ export default function Sidebar() {
                 className="w-full text-left px-3 py-2 text-sm text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded transition-colors"
               >
                 Projects
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => scrollToSection("experience")}
+                className="w-full text-left px-3 py-2 text-sm text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded transition-colors"
+              >
+                Experience
               </button>
             </li>
           </ul>

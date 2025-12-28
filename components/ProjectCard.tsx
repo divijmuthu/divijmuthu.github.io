@@ -22,6 +22,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               width={200}
               height={150}
               className="w-full h-auto rounded-lg object-cover hover:opacity-90 transition-opacity"
+              unoptimized
             />
           </a>
         ) : (
@@ -31,6 +32,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             width={200}
             height={150}
             className="w-full h-auto rounded-lg object-cover"
+            unoptimized
           />
         )}
       </div>

@@ -1,5 +1,6 @@
 import Sidebar from "@/components/Sidebar";
 import ProjectCard from "@/components/ProjectCard";
+import ExperienceCard from "@/components/ExperienceCard";
 import { content } from "@/data/content";
 
 export default function Home() {
@@ -37,6 +38,16 @@ export default function Home() {
             <div>
               {content.projects.map((project, idx) => (
                 <ProjectCard key={idx} project={project} />
+              ))}
+            </div>
+          </section>
+
+          {/* Experience Section (Internships) */}
+          <section id="experience" className="mb-12">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6">Experience</h2>
+            <div>
+              {content.experiences.map((experience, idx) => (
+                <ExperienceCard key={idx} experience={experience} />
               ))}
             </div>
           </section>
