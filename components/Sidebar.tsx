@@ -24,66 +24,18 @@ export default function Sidebar() {
             alt={profile.name}
             width={180}
             height={180}
-            className="rounded-full border-4 border-slate-200 object-cover"
+            className="rounded-full object-cover aspect-square"
             unoptimized
           />
         </div>
 
         {/* Name */}
-        <h1 className="text-3xl font-bold text-slate-900 mb-2 text-center lg:text-left">
+        <h1 className="text-3xl font-bold text-slate-900 mb-3 text-center lg:text-left">
           {profile.name}
         </h1>
 
-        {/* Tagline */}
-        <h2 className="text-lg text-slate-600 mb-4 text-center lg:text-left">
-          {profile.tagline}
-        </h2>
-
-        {/* Bio */}
-        <p className="text-sm text-slate-700 leading-relaxed mb-6 text-center lg:text-left">
-          {profile.bio}
-        </p>
-
-        {/* Navigation */}
-        <nav className="w-full mb-6">
-          <ul className="flex flex-col gap-2">
-            <li>
-              <button
-                onClick={() => scrollToSection("highlights")}
-                className="w-full text-left px-3 py-2 text-sm text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded transition-colors"
-              >
-                Highlights
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => scrollToSection("research")}
-                className="w-full text-left px-3 py-2 text-sm text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded transition-colors"
-              >
-                Research
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => scrollToSection("projects")}
-                className="w-full text-left px-3 py-2 text-sm text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded transition-colors"
-              >
-                Projects
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => scrollToSection("experience")}
-                className="w-full text-left px-3 py-2 text-sm text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded transition-colors"
-              >
-                Experience
-              </button>
-            </li>
-          </ul>
-        </nav>
-
         {/* Social Links */}
-        <div className="flex gap-4 justify-center lg:justify-start">
+        <div className="flex gap-4 justify-center lg:justify-start mb-4">
           {profile.social.github && (
             <a
               href={profile.social.github}
@@ -127,6 +79,59 @@ export default function Sidebar() {
             </a>
           )}
         </div>
+
+        {/* Bio */}
+        <p className="text-base text-slate-700 leading-relaxed mb-6 text-center lg:text-left">
+          {profile.bio}
+        </p>
+
+        {/* Navigation */}
+        <nav className="w-full mb-6">
+          <ul className="flex flex-col gap-2">
+            <li>
+              <button
+                onClick={() => scrollToSection("highlights")}
+                className="w-full text-left px-3 py-2 text-base text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded transition-colors"
+              >
+                Highlights
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => scrollToSection("research")}
+                className="w-full text-left px-3 py-2 text-base text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded transition-colors"
+              >
+                Research
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => scrollToSection("projects")}
+                className="w-full text-left px-3 py-2 text-base text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded transition-colors"
+              >
+                Projects
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => scrollToSection("experience")}
+                className="w-full text-left px-3 py-2 text-base text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded transition-colors"
+              >
+                Experience
+              </button>
+            </li>
+            {content.profile.hobbies && content.profile.hobbies.length > 0 && (
+              <li>
+                <button
+                  onClick={() => scrollToSection("hobbies")}
+                  className="w-full text-left px-3 py-2 text-base text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded transition-colors"
+                >
+                  Hobbies
+                </button>
+              </li>
+            )}
+          </ul>
+        </nav>
       </div>
     </aside>
   );

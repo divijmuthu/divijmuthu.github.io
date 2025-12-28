@@ -18,6 +18,7 @@ export interface Profile {
   tagline: string;
   bio: string;
   image: string;
+  hobbies?: string[];
   social: {
     github?: string;
     scholar?: string;
@@ -58,6 +59,7 @@ export const content: Content = {
     tagline: "Studying EECS at UC Berkeley",
     bio: "Hi! I'm Divij Muthu, currently a sophomore studying Electrical Engineering and Computer Sciences at UC Berkeley. I'm working on 3D image reconstruction via PMUTs in the Liwei Lin Lab, and I'm also interested in signal processing, machine learning, and software development.",
     image: "/images/profile.jpg",
+    hobbies: ["Badminton", "Video Games", "Music"],
     social: {
       github: "https://github.com/divijmuthu",
       linkedin: "https://www.linkedin.com/in/divij-muthu",
@@ -73,7 +75,7 @@ export const content: Content = {
       description: "A novel system for 3D image reconstruction via ultrasound transducers and compressed sensing.",
       links: [
         // { name: "Paper", url: "https://drive.google.com/file/d/1vQMwxJSRwGlUDrlGdhpbOuK76OzTVRa2/view?usp=sharing" },
-        { name: "IEEE MEMS 2026", url: "https://mems26.org" },
+        // { name: "IEEE MEMS 2026", url: "https://mems26.org" },
       ],
       tags: ["Embedded Systems", "Signal Processing", "Compressed Sensing", "Convex Optimization", "Computational Imaging"],
     },
@@ -156,7 +158,7 @@ export const content: Content = {
       date: "Oct. 2025",
       description: "A paper was accepted for an oral presentation at ",
       link: {
-        text: "MEMS26",
+        text: "IEEE MEMS 2026",
         url: "https://mems26.org",
       },
     },

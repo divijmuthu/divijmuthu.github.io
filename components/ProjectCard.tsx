@@ -40,7 +40,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       {/* Content - 75% on desktop */}
       <div className="flex-1 lg:w-3/4">
         {/* Title */}
-        <h3 className="text-lg font-bold text-slate-900 mb-1">
+        <h3 className="text-xl font-bold text-slate-900 mb-2">
           {primaryLink ? (
             <a
               href={primaryLink.url}
@@ -49,7 +49,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               className="hover:text-slate-700 flex items-center gap-1"
             >
               {project.title}
-              <ExternalLink className="w-4 h-4 inline" />
+              <ExternalLink className="w-5 h-5 inline" />
             </a>
           ) : (
             project.title
@@ -57,7 +57,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </h3>
 
         {/* Authors */}
-        <p className="text-sm text-slate-600 mb-1">
+        <p className="text-base text-slate-600 mb-2">
           {project.authors.split(", ").map((author, idx, arr) => {
             const isBold = author === "Divij Muthu" || author.startsWith("Divij Muthu");
             const isLast = idx === arr.length - 1;
@@ -81,14 +81,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         {/* Links */}
         {project.links.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-2">
+          <div className="flex flex-wrap gap-2 mb-3">
             {project.links.map((link, idx) => (
               <a
                 key={idx}
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-slate-600 hover:text-slate-900 underline"
+                className="text-base text-slate-600 hover:text-slate-900 underline"
               >
                 [{link.name}]
               </a>
@@ -97,7 +97,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         )}
 
         {/* Abstract */}
-        <p className="text-sm text-slate-700 leading-relaxed mt-2">{project.description}</p>
+        <p className="text-base text-slate-700 leading-relaxed mt-2">{project.description}</p>
 
         {/* Tags */}
         {project.tags.length > 0 && (

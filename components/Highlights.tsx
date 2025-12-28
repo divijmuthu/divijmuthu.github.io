@@ -10,12 +10,12 @@ export default function Highlights({ highlights }: HighlightsProps) {
       {highlights.map((highlight, idx) => (
         <div key={idx} className="flex gap-6">
           {/* Date Column */}
-          <div className="flex-shrink-0 w-24">
-            <p className="text-sm font-medium text-slate-900">{highlight.date}</p>
+          <div className="flex-shrink-0 w-28">
+            <p className="text-base font-medium text-slate-900">{highlight.date}</p>
           </div>
           {/* Description Column */}
           <div className="flex-1">
-            <p className="text-sm text-slate-700 leading-relaxed">
+            <p className="text-base text-slate-700 leading-relaxed">
               {highlight.description}
               {highlight.link && (
                 <a
