@@ -194,9 +194,14 @@ export const content: Content = {
     // },
     // there's too much bro, let's just do big ones
     {
-      title: "Pokemon Legends: Z-A",
+      title: "Dispatch",
       type: "Game",
       review: "The absolute GOAT.",
+    },
+    {
+      title: "Pokemon Legends: Z-A",
+      type: "Game",
+      review: "Pretty good, honestly agree with the general 8/10 consensus, the story is okay but like SV it really picks up at the end with a strong climax (if only we could have had this momentum or some hints on the way), the gameplay is quite enjoyable but I think PL:A was more fun personally, I didn't feel as engaged and it honestly got boring a lot faster especially when the city looks the same everywhere, feel like there was much more scope for a variety of environments even within the city, and most of the buildings just being inaccessible bricks really hurts the vibe. I think these are moreso symptoms of the underlying focus on making these games cheaply and quickly which naturally has some major drawbacks from an artistic perspective, which is very painful in a highly competitive gaming landscape where works of extreme passion and absurd quality seem to be emerging from every corner.",
     },
     {
       title: "Clair Obscur: Expedition 33",
@@ -204,7 +209,7 @@ export const content: Content = {
       review: "The absolute GOAT.",
     },
     {
-      title: "Monster Hunter: Stories",
+      title: "Monster Hunter Stories",
       type: "Game",
       review: "",
     },
