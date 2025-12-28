@@ -1,4 +1,4 @@
-# Divij Muthu Portfolio
+# The Portfolio
 
 A modern, high-performance personal website built with Next.js, TypeScript, and Tailwind CSS. This portfolio follows the "Barron Remix" design pattern with a split-screen layout optimized for academic and professional presentation.
 
