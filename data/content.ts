@@ -192,6 +192,72 @@ export const content: Content = {
     //   review: "Your review text here. Write as much as you want!",
     //   date: "2025-01-15", // Optional
     // },
+    // there's too much bro, let's just do big ones
+    {
+      title: "Pokemon Legends: Z-A",
+      type: "Game",
+      review: "The absolute GOAT.",
+    },
+    {
+      title: "Clair Obscur: Expedition 33",
+      type: "Game",
+      review: "The absolute GOAT.",
+    },
+    {
+      title: "Monster Hunter: Stories",
+      type: "Game",
+      review: "",
+    },
+    {
+      title: "TLOZ: The Windwaker",
+      type: "Game",
+      review: "Came back to this after a LONG time, from HD back to the original, ",
+    },
+    {
+      title: "Balatro",
+      type: "Game",
+      review: "",
+    },
+    {
+      title: "TLOZ: Breath of the Wild",
+      type: "Game",
+      review: "",
+    },
+    {
+      title: "TLOZ: Echoes of Wisdom",
+      type: "Game",
+      review: "",
+    },
+    {
+      title: "Mario and Luigi: SS, PiT, BIS, Brothership, and tbh Super Mario RPG as well",
+      type: "Game",
+      review: "Compiled this series into a single overall review.",
+    },
+    {
+      title: "Pokemon Violet",
+      type: "Game",
+      review: "",
+    },
+    {
+      title: "Pokemon Legends: Arceus",
+      type: "Game",
+      review: "",
+    },
+    {
+      title: "BTD6",
+      type: "Game",
+      review: "",
+    },
+    {
+      title: "Civilization VI",
+      type: "Game",
+      review: "",
+    },
+    {
+      title: "Catan",
+      type: "Game",
+      review: "I guess this counts, it's a solid board game and I haven't played it much to be honest, mainly interesting as a sort of predecessor to Civ VI. The hexes are memorable, there's a good amount of strategic depth, but the competitiveness is kinda cooked, ties in to my general preference for PvE games and collaboration/achieving something with friends.",
+    },
     {
       title: "The Battle Cats",
       type: "Game",
