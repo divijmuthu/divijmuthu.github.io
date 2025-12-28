@@ -45,8 +45,8 @@ export interface Content {
 export const content: Content = {
   profile: {
     name: "Divij Muthu",
-    tagline: "Electrical Engineering and Computer Sciences Student at UC Berkeley",
-    bio: "Hi! I'm Divij Muthu...welcome to my personal website! I'm passionate about machine learning, software applications, and research. Currently pursuing a Bachelor of Science in EECS at UC Berkeley with a 4.00 GPA.",
+    tagline: "Studying EECS at UC Berkeley",
+    bio: "Hi! I'm Divij Muthu, currently a sophomore studying Electrical Engineering and Computer Sciences at UC Berkeley. I'm working on 3D image reconstruction via PMUTs in the Liwei Lin Lab, and I'm also interested in signal processing, machine learning, and software development.",
     image: "/images/profile.jpg",
     social: {
       github: "https://github.com/divijmuthu",
@@ -60,23 +60,12 @@ export const content: Content = {
       thumbnail: "/images/sensor-research.png",
       authors: "Divij Muthu",
       venue: "IEEE MEMS 2026 (Accepted, Oral Presentation)",
-      description: "Built an automated data acquisition pipeline using Python, C++, and PySerial to interface with Teensy/Arduino MEGA microcontrollers, including firmware for precise sub-microsecond pulse timing, retrieving real-time oscilloscope ADC data via SPI, and signal processing via background subtraction and Butterworth filtering. Adapted MATLAB simulation from EE367: Computational Imaging to test novel setup for 3D image reconstruction via ultrasound transducers (PMUTs), compressed sensing, and reconstruction algorithms (FISTA, ADMM-TV). Designing a custom mixed-signal PCB in KiCad to miniaturize the system, integrating a Teensy 4.1, transmit/receive switching, signal amplification (TI VCA5807), and an 18-bit ADC into a compact device for portable deployment. Collaborating with Berkeley AI Research (Waller Lab) to accelerate reconstruction pipelines using machine learning techniques.",
+      description: "A novel system for 3D image reconstruction via ultrasound transducers and compressed sensing.",
       links: [
         { name: "Paper", url: "https://drive.google.com/file/d/1vQMwxJSRwGlUDrlGdhpbOuK76OzTVRa2/view?usp=sharing" },
         { name: "IEEE MEMS 2026", url: "https://mems26.org" },
       ],
-      tags: ["Embedded Systems", "Signal Processing", "Compressed Sensing", "Hardware Design", "Machine Learning"],
-    },
-    {
-      title: "Analysis and Implementation of Machine Learning Approaches to Identifying DDoS & Benign Network Traffic",
-      thumbnail: "/images/ddos-research.png",
-      authors: "Divij Muthu",
-      venue: "UCIxGATI Science Journal",
-      description: "Guided by Georgia Tech Postdoc, published in UCIxGATI journal. Observed ~95% accuracy in traffic identification for an industry benchmark dataset involving simulated DDoS attacks. Compared and contrasted pros and cons of tested ML models from Scikit-learn such as Decision Tree, Random Forest, SVM for cleaned dataset using SMOTE, provided recommendations on future approaches.",
-      links: [
-        { name: "Paper", url: "https://scienceyouth.org/web/viewer.php?id=175" },
-      ],
-      tags: ["Machine Learning", "Network Security", "DDoS Detection"],
+      tags: ["Embedded Systems", "Signal Processing", "Compressed Sensing", "Convex Optimization", "Computational Imaging"],
     },
   ],
   projects: [
@@ -89,7 +78,29 @@ export const content: Content = {
       links: [
         { name: "Code", url: "https://github.com/divijmuthu/simSensors" },
       ],
-      tags: ["C++", "PyTorch", "Machine Learning", "Embedded Systems", "Signal Processing"],
+      tags: ["C++", "PyTorch", "Machine Learning", "Signal Processing"],
+    },
+    {
+      title: "Analysis and Implementation of Machine Learning Approaches to Identifying DDoS & Benign Network Traffic",
+      thumbnail: "/images/ddos-research.png",
+      authors: "Divij Muthu",
+      venue: "UCIxGATI Science Journal",
+      description: "Guided by Georgia Tech Postdoc, published in UCIxGATI journal. Observed ~95% accuracy in traffic identification for an industry benchmark dataset involving simulated DDoS attacks. Compared and contrasted pros and cons of tested ML models from Scikit-learn such as Decision Tree, Random Forest, SVM for cleaned dataset using SMOTE, provided recommendations on future approaches.",
+      links: [
+        { name: "Paper", url: "https://scienceyouth.org/web/viewer.php?id=175" },
+      ],
+      tags: ["Machine Learning", "Networking", "Cybersecurity"],
+    },
+    {
+      title: "Tabu Search-guided Sigmoid Heuristic for Identification of the Longest Common Subsequence of Multiple Sequences",
+      thumbnail: "/images/lcs-research.png",
+      authors: "Divij Muthu",
+      venue: "Pioneer Academics",
+      description: "Completed with Pioneer Academics, mentored by a Computer Science Professor from Colgate University. The problem of determining the longest common subsequence for an arbitrary number of strings is NP hard...the optimal approach is of exponential time complexity when the number of input strings varies; as such, a heuristic-based solution is appealing, since it can return a reasonably accurate solution relatively quickly.",
+      links: [
+        { name: "Paper", url: "https://drive.google.com/file/d/1JmIS5PAURsnsc84VaG2rja__rcAIpvAS/view?usp=sharing"},
+      ],
+      tags: ["Algorithms", "Heuristics", "Optimization"],
     },
   ],
   experiences: [
@@ -103,7 +114,7 @@ export const content: Content = {
         "Engineering secure backend microservices to synchronize live data with Google Sheets and Excel Online, implementing OAuth 2.0 authentication flows to ensure data integrity and security.",
         "Collaborating on the full-stack architecture for a system designed to process 50+ candidates weekly, optimizing database interactions to reduce latency in candidate-to-recruiter matching.",
       ],
-      tags: ["React", "Node.js", "LLM", "OAuth 2.0", "Full-Stack"],
+      tags: ["React", "Node.js", "Gemini LLM API", "OAuth 2.0", "Full-Stack"],
     },
     {
       title: "Undergraduate Researcher",
@@ -114,9 +125,8 @@ export const content: Content = {
         "Built an automated data acquisition pipeline using Python, C++, and PySerial to interface with Teensy/Arduino MEGA microcontrollers, including firmware for precise sub-microsecond pulse timing, retrieving real-time oscilloscope ADC data via SPI, and signal processing via background subtraction, Butterworth filtering from SciPy.",
         "Adapted MATLAB simulation from EE367: Computational Imaging to test novel setup for 3D image reconstruction via ultrasound transducers (PMUTs), compressed sensing, and reconstruction algorithms (FISTA, ADMM-TV).",
         "Designing a custom mixed-signal PCB in KiCad to miniaturize the system, integrating a Teensy 4.1, transmit/receive switching, signal amplification (TI VCA5807), and an 18-bit ADC into a compact device for portable deployment.",
-        "Paper accepted to IEEE MEMS 2026 for an oral presentation, presented findings at Rice GCURS, collaborating with Berkeley AI Research (Waller Lab) to accelerate reconstruction pipelines using machine learning techniques.",
       ],
-      tags: ["Python", "C++", "Embedded Systems", "Signal Processing", "Hardware Design", "KiCad"],
+      tags: ["Python", "Embedded Systems", "Signal Processing", "Hardware and PCB Design", "KiCad"],
     },
     {
       title: "Full Stack Software Engineering Intern",
@@ -128,7 +138,7 @@ export const content: Content = {
         "Engineered several intuitive user-facing features, including app-wide movie/show and notification preference systems, front-end and back-end list sorting via a reusable component, and UI fixes for Android and dark mode.",
         "Reduced network latency for filtering by ~20% and improved application performance by implementing batch updates, local caching, and optimized data fetching strategies with RESTful APIs e.g. TMDB API for movie/show data.",
       ],
-      tags: ["React Native", "Firebase", "GCP", "NoSQL", "Full-Stack"],
+      tags: ["React Native", "TypeScript", "Firebase", "Google Cloud Platform", "Cloud Functions","XCode", "Android Emulator", "Jira"],
     },
   ],
 };
