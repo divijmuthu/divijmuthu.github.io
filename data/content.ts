@@ -69,7 +69,7 @@ export const content: Content = {
       title: "3D Image Reconstruction via Ultrasound Transducers and Compressed Sensing",
       thumbnail: "/images/sensor-research.png",
       authors: "Divij Muthu",
-      venue: "IEEE MEMS 2026 (Accepted, Oral Presentation)",
+      venue: "IEEE MEMS 2026 (Accepted for oral presentation)",
       description: "A novel system for 3D image reconstruction via ultrasound transducers and compressed sensing.",
       links: [
         // { name: "Paper", url: "https://drive.google.com/file/d/1vQMwxJSRwGlUDrlGdhpbOuK76OzTVRa2/view?usp=sharing" },
@@ -153,7 +153,7 @@ export const content: Content = {
   ],
   highlights: [
     {
-      date: "Oct, 2025",
+      date: "Oct. 2025",
       description: "A paper was accepted for an oral presentation at ",
       link: {
         text: "MEMS26",
@@ -161,10 +161,10 @@ export const content: Content = {
       },
     },
     {
-      date: "Sept, 2025",
-      description: "Divij Muthu (undergrad) was accepted to give a talk at ",
+      date: "Sept. 2025",
+      description: "I was accepted to give a talk at Rice University's ",
       link: {
-        text: "GCURS",
+        text: "Gulf Coast Undergraduate Research Symposium",
         url: "https://lukhanin.net/images/dmRice.jpeg",
       },
     },
