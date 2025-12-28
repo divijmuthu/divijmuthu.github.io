@@ -68,7 +68,7 @@ export const content: Content = {
     {
       title: "3D Image Reconstruction via Ultrasound Transducers and Compressed Sensing",
       thumbnail: "/images/sensor-research.png",
-      authors: "Divij Muthu",
+      authors: "Nikita G. Lukhanin, Divij Muthu, Chaoying Gu, Megan Teng, Kamyar Behrouzi, Chun-Ming Chen, Laura Waller, and Liwei Lin",
       venue: "IEEE MEMS 2026 (Accepted for oral presentation)",
       description: "A novel system for 3D image reconstruction via ultrasound transducers and compressed sensing.",
       links: [

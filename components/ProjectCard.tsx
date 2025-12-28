@@ -57,7 +57,22 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </h3>
 
         {/* Authors */}
-        <p className="text-sm text-slate-600 mb-1">{project.authors}</p>
+        <p className="text-sm text-slate-600 mb-1">
+          {project.authors.split(", ").map((author, idx, arr) => {
+            const isBold = author === "Divij Muthu" || author.startsWith("Divij Muthu");
+            const isLast = idx === arr.length - 1;
+            return (
+              <span key={idx}>
+                {isBold ? (
+                  <strong className="font-semibold text-slate-900">{author}</strong>
+                ) : (
+                  author
+                )}
+                {!isLast && ", "}
+              </span>
+            );
+          })}
+        </p>
 
         {/* Venue */}
         <div className="mb-2">
