@@ -100,7 +100,7 @@ export const content: Content = {
       links: [
         { name: "Code", url: "https://github.com/divijmuthu/simSensors" },
       ],
-      tags: ["C++", "PyTorch", "Machine Learning", "Signal Processing"],
+      tags: ["C++", "PyTorch", "PyGame", "Machine Learning", "Signal Processing"],
     },
     {
       title: "Analysis and Implementation of Machine Learning Approaches to Identifying DDoS & Benign Network Traffic",
@@ -111,7 +111,7 @@ export const content: Content = {
       links: [
         { name: "Paper", url: "https://scienceyouth.org/web/viewer.php?id=175" },
       ],
-      tags: ["Machine Learning", "Networking", "Cybersecurity"],
+      tags: ["Scikit-learn","SMOTE","Machine Learning", "Networking", "Cybersecurity"],
     },
     {
       title: "Tabu Search-guided Sigmoid Heuristic for Identification of the Longest Common Subsequence of Multiple Sequences",
