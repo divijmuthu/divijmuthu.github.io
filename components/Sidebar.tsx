@@ -59,7 +59,7 @@ export default function Sidebar() {
     { id: "projects", label: "Projects" },
     { id: "experience", label: "Experience" },
     ...(content.mediaReviews && content.mediaReviews.length > 0
-      ? [{ id: "media-reviews", label: "Media Reviews" }]
+      ? [{ id: "media-reviews", label: "Extras" }]
       : []),
   ];
 
