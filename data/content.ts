@@ -118,11 +118,11 @@ export const content: Content = {
       thumbnail: "/images/lcs-research.png",
       authors: "Divij Muthu",
       venue: "Pioneer Academics",
-      description: "Completed with Pioneer Academics, mentored by a Computer Science Professor from Colgate University. The problem of determining the longest common subsequence for an arbitrary number of strings is NP hard...the optimal approach is of exponential time complexity when the number of input strings varies; as such, a heuristic-based solution is appealing, since it can return a reasonably accurate solution relatively quickly.",
+      description: "Completed with Pioneer Academics, mentored by a Computer Science Professor from Colgate University. Abstract: The problem of determining the longest common subsequence for an arbitrary number of strings is NP hard...the optimal approach is of exponential time complexity when the number of input strings varies; as such, a heuristic-based solution is appealing, since it can return a reasonably accurate solution relatively quickly. Implemented algorithm in Java and created a piece of generative art using the algorithm’s output for a Lindenmayer System.",
       links: [
         { name: "Paper", url: "https://drive.google.com/file/d/1JmIS5PAURsnsc84VaG2rja__rcAIpvAS/view?usp=sharing"},
       ],
-      tags: ["Algorithms", "Heuristics", "Optimization"],
+      tags: ["Algorithms", "Heuristics", "Optimization", "Generative Art", "p5.js", "Java", "openprocessing.org"],
     },
   ],
   experiences: [
