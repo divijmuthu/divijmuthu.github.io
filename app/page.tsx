@@ -81,7 +81,7 @@ export default function Home() {
               </h2>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                 {content.mediaReviews.map((review, idx) => (
-                  <MediaReviewCard key={idx} review={review} />
+                  <MediaReviewCard key={idx} review={review} span={review.span || 3} />
                 ))}
               </div>
             </section>
