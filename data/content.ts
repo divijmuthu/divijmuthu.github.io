@@ -130,7 +130,7 @@ export const content: Content = {
     {
       title: "Software Development Intern",
       company: "TopSeeds LLC",
-      location: "Pleasanton, CA",
+      location: "Pleasant Hill, CA",
       date: "December 2025 - Present",
       description: [
         "Developing an AI-powered executive recruiting platform using React and Node.js, integrating the Gemini LLM API to automate screening various roles for candidate fit and generate natural language advice on pursuing these openings.",
