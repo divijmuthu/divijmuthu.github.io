@@ -11,29 +11,33 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const primaryLink = project.links[0];
 
   return (
-    <div className="flex flex-col lg:flex-row gap-4 mb-8 pb-8 border-b border-slate-200 last:border-b-0">
+    <div className="flex flex-col lg:flex-row gap-4 mb-8 pb-8 border-b border-slate-200/60 last:border-b-0">
       {/* Thumbnail - 25% on desktop */}
       <div className="flex-shrink-0 w-full lg:w-1/4">
         {primaryLink ? (
-          <a href={primaryLink.url} target="_blank" rel="noopener noreferrer" className="block">
+          <a href={primaryLink.url} target="_blank" rel="noopener noreferrer" className="block group">
+            <div className="relative overflow-hidden rounded-lg shadow-md group-hover:shadow-xl transition-shadow">
+              <Image
+                src={project.thumbnail}
+                alt={project.title}
+                width={200}
+                height={150}
+                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                unoptimized
+              />
+            </div>
+          </a>
+        ) : (
+          <div className="relative overflow-hidden rounded-lg shadow-md">
             <Image
               src={project.thumbnail}
               alt={project.title}
               width={200}
               height={150}
-              className="w-full h-auto rounded-lg object-cover hover:opacity-90 transition-opacity"
+              className="w-full h-auto object-cover"
               unoptimized
             />
-          </a>
-        ) : (
-          <Image
-            src={project.thumbnail}
-            alt={project.title}
-            width={200}
-            height={150}
-            className="w-full h-auto rounded-lg object-cover"
-            unoptimized
-          />
+          </div>
         )}
       </div>
 

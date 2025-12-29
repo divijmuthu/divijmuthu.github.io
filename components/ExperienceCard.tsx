@@ -7,7 +7,7 @@ interface ExperienceCardProps {
 
 export default function ExperienceCard({ experience }: ExperienceCardProps) {
   return (
-    <div className="mb-8 pb-8 border-b border-slate-200 last:border-b-0">
+    <div className="mb-8 pb-8 border-b border-slate-200/60 last:border-b-0">
       {/* Title and Company */}
       <div className="mb-2">
         <h3 className="text-xl font-bold text-slate-900 inline">

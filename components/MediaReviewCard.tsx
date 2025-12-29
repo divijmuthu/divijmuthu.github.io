@@ -7,20 +7,22 @@ interface MediaReviewCardProps {
 
 export default function MediaReviewCard({ review }: MediaReviewCardProps) {
   return (
-    <div className="flex gap-4 p-4 bg-slate-50 border border-slate-200 rounded-lg hover:bg-slate-100 transition-colors">
+    <div className="flex gap-4 p-4 bg-white/80 backdrop-blur-sm border border-slate-200/60 rounded-lg hover:bg-white hover:shadow-md transition-all">
       {/* Icon/Image - Left side */}
       <div className="flex-shrink-0 w-16 h-16">
         {review.icon ? (
-          <Image
-            src={review.icon}
-            alt={review.title}
-            width={64}
-            height={64}
-            className="w-full h-full object-cover rounded"
-            unoptimized
-          />
+          <div className="relative overflow-hidden rounded-lg shadow-sm">
+            <Image
+              src={review.icon}
+              alt={review.title}
+              width={64}
+              height={64}
+              className="w-full h-full object-cover"
+              unoptimized
+            />
+          </div>
         ) : (
-          <div className="w-full h-full bg-slate-200 rounded flex items-center justify-center">
+          <div className="w-full h-full bg-gradient-to-br from-slate-200 to-slate-300 rounded-lg flex items-center justify-center shadow-sm">
             <span className="text-2xl">🎬</span>
           </div>
         )}
