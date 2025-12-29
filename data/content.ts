@@ -98,11 +98,11 @@ export const content: Content = {
       thumbnail: "/images/sensor-project.png",
       authors: "",
       venue: "Personal Project",
-      description: "Implemented C++ modules to simulate noisy sensor data streams (IMU, GPS, Compass, Barometer), and extract features including mean, variance of 3D coordinates, DFT for motion frequencies, modeling activities like walking, jumping. Trained a lightweight neural network in PyTorch to classify the activity being performed from a live data window of 256 samples via extracted features, observing ~98% accuracy & 0.98 f1-score with 100 Hz sampling rate and 6 activities. Built an interactive demo in PyGame with ~59 fps, ~30 us to simulate data in C++, ~0.05 ms to classify with ML.",
+      description: "Implemented C++ modules to simulate noisy sensor data streams (IMU, GPS, Compass, Barometer), and extract features including mean, variance of 3D coordinates, DFT for motion frequencies, modeling activities like walking, jumping. Used Pybind11 to expose C++ modules to Python for real-time data generation to build the classifier model. Trained a lightweight neural network in PyTorch to classify the activity being performed from a live data window of 256 samples via extracted features, observing ~98% accuracy & 0.98 f1-score with 100 Hz sampling rate and 6 activities. Built an interactive demo in PyGame with ~59 fps, ~30 us to simulate data in C++, ~0.05 ms to classify with ML.",
       links: [
         { name: "Code", url: "https://github.com/divijmuthu/simSensors" },
       ],
-      tags: ["C++", "PyTorch", "PyGame", "Machine Learning", "Signal Processing"],
+      tags: ["C++", "PyTorch", "PyBind", "PyGame", "Machine Learning", "Signal Processing"],
     },
     {
       title: "Secure File Sharing System",
