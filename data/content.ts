@@ -15,7 +15,7 @@ export interface Project {
 
 export interface MediaReview {
   title: string;
-  type: "Movie" | "TV Show" | "Book" | "Game" | "Album" | "Podcast" | "Band" | "Other";
+  type: "Movie" | "TV Show" | "Book" | "Game" | "Album" | "Podcast" | "Band" | "Music" | "Other";
   icon?: string; // Path to icon/image
   rating?: number; // 1-10 or 1-5 scale
   review: string;
@@ -272,7 +272,12 @@ export const content: Content = {
       title: "Sabaton",
       type: "Band",
       review: "Enjoyable music, historical themes are pretty cool and have taught me so much about specific heroes and events. Really complex themes, naturally, but the music goes hard and I think it's pretty respectful while acknowledging how messy history can be. Have been listening for quite a while now, in general probably the main standard band I listen to along with various video game soundtracks.",
-    }
+    },
+    {
+      title: "TLOZ: Soundtracks in general",
+      type: "Music",
+      review: "Wanted to highlight the sheer brilliance of the sound design across the entire franchise, there are so many iconic themes for practically every basic player action, environmental shift e.g. discoveries in a dungeon, acquiring an item from a chest, defeating a boss, even just healing and using classic items like the hookshot (you probably heard all these themes going off in your head as I listed them out). Koji Kondo is the core composer and an absolute genius, and every contributor to this series' masterful sound design has done a fantastic job. I don't know if there's any other series where every little sound effect perfectly captures the intended vibes of a moment, i.e. achieving exactly what's desired for a video game soundtrack.",
+    },
   ],
 };
 
