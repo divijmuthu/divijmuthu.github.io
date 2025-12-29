@@ -219,6 +219,12 @@ export const content: Content = {
       review: "Surprisingly great and got sucked into this one, it really is superior to modern Pokemon in a lot of ways BUT it struggles with something I think the Pokemon Legends games have done well, which is cycling new Pokemon consistently since the wild encounters are of a good enough or even higher level which justifies their addition to the team, making the party building process much more compelling. MHS was pretty strong in this regard but starting everything off at Level 1 kinda hurts. But of course I'm generally of the opinion that this game is a fantastic example of the 'creature capture' genre, and it was a great first experience with the MH franchise. All the monsters look awesome (which fits my personal taste a bit better than the wide variety of Pokemon which often have more cute or simplistic designs), and the story was pretty good, definitely better than a lot of the repetitive Pokemon narratives. Of course there's more to this than pure comparisons, the game stands out by merging traditional MH mechanics with a turn-based system and fighting alongside the monsters, which just radiates aura. In fact you need to acquire a lot of aura by acting in sync with your partner 'monstie' to execute the most powerful attacks; your monstie is probably doing most of the heavy lifting, leading to a nuanced system where the player is directly involved in fights but extremely vulnerable and supposedly more of a supporting combatant, although you can just attack with both like I did :p. The huge cast of monsters from MH lore really shines here, and it makes this adventure a pleasure to see through--although like many RPGs it suffers from isolated postgame content that requires a dedicated grind to level up enough to enjoy, beat Kushala Daora and acquired a few elder dragons but between the gene slot alignment mess, ridiculous power increase for Silver Rathalos, and slow leveling, I was ready to move on.",
     },
     {
+      title: "South Park: The Stick of Truth",
+      type: "Game",
+      span: 3,
+      review: "",
+    },
+    {
       title: "TLOZ: The Windwaker",
       type: "Game",
       span: 3,
