@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { content } from "@/data/content";
-import { Github, Mail, Linkedin, GraduationCap } from "lucide-react";
+import { Github, Mail, Linkedin, GraduationCap, FileText } from "lucide-react";
 
 export default function Sidebar() {
   const { profile } = content;
@@ -128,6 +128,15 @@ export default function Sidebar() {
               <Mail className="w-5 h-5" />
             </a>
           )}
+          <a
+            href="/cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-600 hover:text-slate-900 transition-all hover:scale-110"
+            aria-label="CV"
+          >
+            <FileText className="w-5 h-5" />
+          </a>
         </div>
 
         {/* Bio */}

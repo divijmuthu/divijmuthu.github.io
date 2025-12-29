@@ -1,5 +1,6 @@
 import { Experience } from "@/data/content";
 import Badge from "./Badge";
+import { ExternalLink } from "lucide-react";
 
 interface ExperienceCardProps {
   experience: Experience;
@@ -14,9 +15,21 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
           {experience.title}
         </h3>
         <span className="text-slate-600 mx-2">•</span>
-        <span className="text-xl text-slate-700 font-medium">
-          {experience.company}
-        </span>
+        {experience.link ? (
+          <a
+            href={experience.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xl text-slate-700 font-medium hover:text-slate-900 underline inline-flex items-center gap-1 transition-colors"
+          >
+            {experience.company}
+            <ExternalLink className="w-4 h-4 inline" />
+          </a>
+        ) : (
+          <span className="text-xl text-slate-700 font-medium">
+            {experience.company}
+          </span>
+        )}
         {experience.location && (
           <>
             <span className="text-slate-600 mx-2">•</span>

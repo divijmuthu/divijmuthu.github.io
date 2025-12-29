@@ -44,6 +44,7 @@ export interface Experience {
   date: string;
   description: string[];
   tags?: string[];
+  link?: string;
 }
 
 export interface Highlight {
@@ -95,7 +96,7 @@ export const content: Content = {
     {
       title: "Real-Time Sensor Simulation and Activity Classification with C++ & PyTorch",
       thumbnail: "/images/sensor-project.png",
-      authors: "Divij Muthu",
+      authors: "",
       venue: "Personal Project",
       description: "Implemented C++ modules to simulate noisy sensor data streams (IMU, GPS, Compass, Barometer), and extract features including mean, variance of 3D coordinates, DFT for motion frequencies, modeling activities like walking, jumping. Trained a lightweight neural network in PyTorch to classify the activity being performed from a live data window of 256 samples via extracted features, observing ~98% accuracy & 0.98 f1-score with 100 Hz sampling rate and 6 activities. Built an interactive demo in PyGame with ~59 fps, ~30 us to simulate data in C++, ~0.05 ms to classify with ML.",
       links: [
@@ -104,9 +105,18 @@ export const content: Content = {
       tags: ["C++", "PyTorch", "PyGame", "Machine Learning", "Signal Processing"],
     },
     {
+      title: "Secure File Sharing System",
+      thumbnail: "/images/ddos-research.png",
+      authors: "",
+      venue: "CS161: Computer Security (course project)",
+      description: "Developed a secure file sharing system using Golang, tested with Ginkgo, and incorporating a provided cryptographic library with AES-256 symmetric encryption and HMAC-SHA256 authentication, as well as RSA-2048 asymmetric encryption and Digital Signatures. Allowed users to create accounts, store and efficiently append to files, and both share and revoke access to their files.",
+      links: [],
+      tags: ["Cryptography", 'Golang', 'Ginkgo', "Cybersecurity"],
+    },
+    {
       title: "Analysis and Implementation of Machine Learning Approaches to Identifying DDoS & Benign Network Traffic",
       thumbnail: "/images/ddos-research.png",
-      authors: "Divij Muthu",
+      authors: "",
       venue: "UCIxGATI Science Journal",
       description: "Guided by Georgia Tech Postdoc, published in UCIxGATI journal. Observed ~95% accuracy in traffic identification for an industry benchmark dataset involving simulated DDoS attacks. Compared and contrasted pros and cons of tested ML models from Scikit-learn such as Decision Tree, Random Forest, SVM for cleaned dataset using SMOTE, provided recommendations on future approaches.",
       links: [
@@ -117,7 +127,7 @@ export const content: Content = {
     {
       title: "Tabu Search-guided Sigmoid Heuristic for Identification of the Longest Common Subsequence of Multiple Sequences",
       thumbnail: "/images/lcs-research.png",
-      authors: "Divij Muthu",
+      authors: "",
       venue: "Pioneer Academics",
       description: "Completed with Pioneer Academics, mentored by a Computer Science Professor from Colgate University. Abstract: The problem of determining the longest common subsequence for an arbitrary number of strings is NP hard...the optimal approach is of exponential time complexity when the number of input strings varies; as such, a heuristic-based solution is appealing, since it can return a reasonably accurate solution relatively quickly. Implemented algorithm in Java and created a piece of generative art using the algorithm’s output for a Lindenmayer System.",
       links: [
@@ -132,6 +142,7 @@ export const content: Content = {
       company: "TopSeeds LLC",
       location: "Pleasant Hill, CA",
       date: "December 2025 - Present",
+      link: "https://www.topseedscoach.com",
       description: [
         "Developing an AI-powered executive recruiting platform using React and Node.js, integrating the Gemini LLM API to automate screening various roles for candidate fit and generate natural language advice on pursuing these openings.",
         "Engineering secure backend microservices to synchronize live data with Google Sheets and Excel Online, implementing OAuth 2.0 authentication flows to ensure data integrity and security.",
@@ -144,18 +155,31 @@ export const content: Content = {
       company: "Liwei Lin Lab - Berkeley Sensor and Actuator Center",
       location: "Berkeley, CA",
       date: "April 2025 - Present",
+      link: "https://linlab.me.berkeley.edu",
       description: [
         "Built an automated data acquisition pipeline using Python, C++, and PySerial to interface with Teensy/Arduino MEGA microcontrollers, including firmware for precise sub-microsecond pulse timing, retrieving real-time oscilloscope ADC data via SPI, and signal processing via background subtraction, Butterworth filtering from SciPy.",
         "Adapted MATLAB simulation from EE367: Computational Imaging to test novel setup for 3D image reconstruction via ultrasound transducers (PMUTs), compressed sensing, and reconstruction algorithms (FISTA, ADMM-TV).",
         "Designing a custom mixed-signal PCB in KiCad to miniaturize the system, integrating a Teensy 4.1, transmit/receive switching, signal amplification (TI VCA5807), and an 18-bit ADC into a compact device for portable deployment.",
       ],
-      tags: ["Python", "Embedded Systems", "Signal Processing", "Hardware and PCB Design", "KiCad"],
+      tags: ["Python", "C++/Arduino","Embedded Systems", "Signal Processing", "MEMS", "Hardware and PCB Design", "KiCad"],
+    },
+    {
+      title: "Lab Tutor",
+      company: "EECS16A: Intro to Signals & Systems",
+      location: "Berkeley, CA",
+      date: "August 2025 - Present",
+      link: "https://eecs16a.org",
+      description: [
+        "Supporting students' learning of key linear algebra and signal processing concepts, aiding completion of challenging labs e.g. NumPy fundamentals, simplified Shazam, simulating an Acoustic Positioning System, PCA-based Voice Recognition for several words."
+      ],
+      tags: ["Python", "C++/Arduino","Embedded Systems", "Signal Processing", "MEMS", "Hardware and PCB Design", "KiCad"],
     },
     {
       title: "Full Stack Software Engineering Intern",
       company: "Take2 Movies and Shows",
       location: "Virtual",
       date: "March 2025 - August 2025",
+      link: "https://apps.apple.com/ca/app/take2-movies-shows/id6737178731",
       description: [
         "Spearheaded full-stack feature development for a social media app within a Google Cloud (GCP) and Firebase ecosystem, building core functionalities with Firebase Auth, Cloud Firestore (NoSQL), and React Native.",
         "Engineered several intuitive user-facing features, including app-wide movie/show and notification preference systems, front-end and back-end list sorting via a reusable component, and UI fixes for Android and dark mode.",
