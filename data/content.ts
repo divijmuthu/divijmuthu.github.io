@@ -267,6 +267,12 @@ export const content: Content = {
       review: "",
     },
     {
+      title: "Kirby and the Forgotten Land",
+      type: "Game",
+      span: 3,
+      review: "Tres bien",
+    },
+    {
       title: "TLOZ: Echoes of Wisdom",
       type: "Game",
       span: 3,
