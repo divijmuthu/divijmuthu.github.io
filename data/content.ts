@@ -300,7 +300,7 @@ export const content: Content = {
       title: "BTD6",
       type: "Game",
       span: 3,
-      review: "",
+      review: "This is one of those Overwhelmingly Positive GOATs which you can literally play forever, not because of endless permutations of runs like roguelikes or strategy game scenarios, but just because of the insane amount of raw content (ok, there's technically infinite content because of map creation but there's easily years worth of official content already). Probably a true must-play for everyone, affordable and endless fun with constant updates and deep, ever-shifting strategy (sometimes due to well-earned buffs or nerfs, other times because of bugs...looking at you The Final Harmonic). The towers are great, the music is strong, if you feel like seriously pushing on the economic side you can go for farming, co-op is enjoyable, Odysseys are a healthy challenge when you're up for it, bosses push the game to its limits, and daily challenges are healthy morning puzzles.",
     },
     {
       title: "Civilization VI",
