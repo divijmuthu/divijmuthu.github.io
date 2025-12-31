@@ -111,7 +111,7 @@ export const content: Content = {
       venue: "CS161: Computer Security (course project)",
       description: "Developed a secure file sharing system using Golang, tested with Ginkgo, and incorporating a provided cryptographic library with AES-256 symmetric encryption and HMAC-SHA256 authentication, as well as RSA-2048 asymmetric encryption and Digital Signatures. Allows users to create accounts, store and efficiently append to files, and both share and revoke access to their files in a manner secure from adversaries who can read \& manipulate the underlying database as well as hostile revoked users who seek to regain access.",
       links: [],
-      tags: ["Cryptography", 'Go/Golang', 'Ginkgo', "Cybersecurity"],
+      tags: ["Cryptography", 'Go/Golang', 'Ginkgo', "Cryptography", "Cybersecurity"],
     },
     {
       title: "Analysis and Implementation of Machine Learning Approaches to Identifying DDoS & Benign Network Traffic",
