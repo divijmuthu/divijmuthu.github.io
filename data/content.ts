@@ -172,7 +172,7 @@ export const content: Content = {
       description: [
         "Supporting students' learning of key linear algebra and signal processing concepts, aiding completion of challenging labs e.g. NumPy fundamentals, simplified Shazam, simulating an Acoustic Positioning System, PCA-based Voice Recognition for several words."
       ],
-      tags: ["Python", "C++/Arduino","Embedded Systems", "Signal Processing", "MEMS", "Hardware and PCB Design", "KiCad"],
+      tags: ["Numpy", "PCA", "Linear Algebra", "Signal Processing"],
     },
     {
       title: "Full Stack Software Engineering Intern",
