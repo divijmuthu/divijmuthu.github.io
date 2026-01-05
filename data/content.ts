@@ -89,7 +89,7 @@ export const content: Content = {
         // { name: "Paper", url: "https://drive.google.com/file/d/1vQMwxJSRwGlUDrlGdhpbOuK76OzTVRa2/view?usp=sharing" },
         // { name: "IEEE MEMS 2026", url: "https://mems26.org" },
       ],
-      tags: ["Embedded Systems", "Signal Processing", "Compressed Sensing", "Convex Optimization", "Computational Imaging"],
+      tags: ["Compressed Sensing", "Convex Optimization", "Computational Imaging", "MEMS", "Ultrasound", "Signal Processing"],
     },
   ],
   projects: [
