@@ -83,7 +83,7 @@ export const content: Content = {
       title: "3D Image Reconstruction via Ultrasound Transducers and Compressed Sensing",
       thumbnail: "/images/sensor-research.png",
       authors: "Nikita G. Lukhanin, Divij Muthu, Chaoying Gu, Megan Teng, Kamyar Behrouzi, Chun-Ming Chen, Laura Waller, and Liwei Lin",
-      venue: "IEEE MEMS 2026 (Accepted for oral presentation)",
+      venue: "IEEE MEMS 2026",
       description: "A novel system for 3D image reconstruction via ultrasound transducers and compressed sensing.",
       links: [
         // { name: "Paper", url: "https://drive.google.com/file/d/1vQMwxJSRwGlUDrlGdhpbOuK76OzTVRa2/view?usp=sharing" },
@@ -108,7 +108,7 @@ export const content: Content = {
       title: "Secure File Sharing System",
       thumbnail: "/images/ddos-research.png",
       authors: "",
-      venue: "CS161: Computer Security (course project)",
+      venue: "CS161: Computer Security",
       description: "Developed a secure file sharing system using Golang, tested with Ginkgo, and incorporating a provided cryptographic library with AES-256 symmetric encryption and HMAC-SHA256 authentication, as well as RSA-2048 asymmetric encryption and Digital Signatures. Allows users to create accounts, store and efficiently append to files, and both share and revoke access to their files in a manner secure from adversaries who can read \& manipulate the underlying database as well as hostile revoked users who seek to regain access.",
       links: [],
       tags: ["Cryptography", 'Go/Golang', 'Ginkgo', "Cybersecurity"],

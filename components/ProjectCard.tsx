@@ -80,7 +80,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         {/* Venue */}
         <div className="mb-2">
-          <Badge variant="accent">{project.venue}</Badge>
+          <Badge variant="subtitle">{project.venue}</Badge>
         </div>
 
         {/* Links */}
