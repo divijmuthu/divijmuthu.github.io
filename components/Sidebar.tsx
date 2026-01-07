@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { content } from "@/data/content";
 import { Github, Mail, Linkedin, GraduationCap, FileText } from "lucide-react";
@@ -8,18 +8,12 @@ import { Github, Mail, Linkedin, GraduationCap, FileText } from "lucide-react";
 export default function Sidebar() {
   const { profile } = content;
   const [activeSection, setActiveSection] = useState<string>("highlights");
-  const isScrollingRef = useRef<boolean>(false);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      isScrollingRef.current = true;
-      setActiveSection(id);
       element.scrollIntoView({ behavior: "smooth" });
-      // Re-enable observer after scroll completes (smooth scroll typically takes ~500-1000ms)
-      setTimeout(() => {
-        isScrollingRef.current = false;
-      }, 1000);
+      setActiveSection(id);
     }
   };
 
@@ -33,9 +27,6 @@ export default function Sidebar() {
     };
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      // Don't update active section if we're programmatically scrolling
-      if (isScrollingRef.current) return;
-      
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setActiveSection(entry.target.id);
