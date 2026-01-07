@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { content } from "@/data/content";
 import { Github, Mail, Linkedin, GraduationCap, FileText } from "lucide-react";
@@ -8,12 +8,29 @@ import { Github, Mail, Linkedin, GraduationCap, FileText } from "lucide-react";
 export default function Sidebar() {
   const { profile } = content;
   const [activeSection, setActiveSection] = useState<string>("highlights");
+  const isScrollingRef = useRef<boolean>(false);
+  const targetSectionRef = useRef<string | null>(null);
+  const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      // Clear any pending timeout from previous clicks
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
+      
+      // Set the target section and disable observer updates
+      targetSectionRef.current = id;
+      isScrollingRef.current = true;
       setActiveSection(id);
+      element.scrollIntoView({ behavior: "smooth" });
+      
+      // Re-enable observer after scroll completes
+      scrollTimeoutRef.current = setTimeout(() => {
+        isScrollingRef.current = false;
+        targetSectionRef.current = null;
+      }, 1200); // Increased timeout to ensure smooth scroll completes
     }
   };
 
@@ -27,6 +44,9 @@ export default function Sidebar() {
     };
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      // Completely ignore observer updates during programmatic scrolling
+      if (isScrollingRef.current) return;
+      
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setActiveSection(entry.target.id);
@@ -50,6 +70,10 @@ export default function Sidebar() {
           observer.unobserve(element);
         }
       });
+      // Clean up timeout on unmount
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
     };
   }, []);
 
