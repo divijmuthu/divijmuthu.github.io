@@ -219,6 +219,12 @@ export const content: Content = {
     // },
     // there's too much bro, let's just do big ones
     {
+      title: "Pikmin 3 Deluxe",
+      type: "Game",
+      span: 3,
+      review: "Great game, very unique playstyle which makes the 'dandori' philosophy very clear and useful. Waited on this for 12 years (still have the original WiiU version's trailer saved on youtube) after the demo ages ago, and now finally got to experience it in all it's glory...on an oddly easy mode. Don't be fooled, the difficulty system is simplistic but still helpful as it'll probably play out differently for everyone. Unfortunately I played on Normal which is supposedly easier than the original, but I feel like this was actually beneficial as I got to take my time and thoroughly explore, though my overall completion time was pretty typical i.e. long (quite a few extra days due to backtracking for 100% fruit!). The fruit situation is pretty straightforward but unfortunately I often found myself wasting time/being inefficient purely because I didn't pursue the available objectives in the most direct/linear route possible, exploring alternate paths before completing main objectives which in turn overcomplicates the game. Like many stories I've heard of other games in the series your first time is quite tricky, and your second time is very straightforward to map out once you know the relevant objectives, constraints, and of course Pikmin involved. That's not to say this isn't a fun experience with an insane variety of enemies, engaging battles, and a pretty substantial campaign. Overall a pretty strong game, just happened upon it during a pretty busy period and needed to learn the ropes, but honestly I'd like to try it on Ultra-Spicy mode sometime even if it's pretty much the same game now that I understand exactly how to proceed and can probably handle some tougher, if more tedious to slay, foes. Beautiful art with a fantastic soundtrack, consistent aesthetic, and the series' classic eerie implications of Earth--er, I mean PNF-404 long after a rather familiar intelligent species' departure...",
+    },
+    {
       title: "Dispatch",
       type: "Game",
       span: 3,
