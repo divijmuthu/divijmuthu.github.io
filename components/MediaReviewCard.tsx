@@ -18,7 +18,9 @@ export default function MediaReviewCard({ review, span = 3 }: MediaReviewCardPro
   const textSize = isFullWidth ? "text-base" : "text-sm";
 
   return (
-    <div className={`flex gap-4 p-4 bg-white/80 backdrop-blur-sm border border-slate-200/60 rounded-lg hover:bg-white hover:shadow-md transition-all ${spanClass}`}>
+    <div
+      className={`flex gap-4 p-4 bg-[var(--sidebar-bg)] backdrop-blur-sm border border-[var(--border-color)] rounded-lg hover:brightness-105 hover:shadow-md transition-all ${spanClass}`}
+    >
       {/* Icon/Image - Left side */}
       <div className={`flex-shrink-0 ${iconSize}`}>
         {review.icon ? (
@@ -42,11 +44,11 @@ export default function MediaReviewCard({ review, span = 3 }: MediaReviewCardPro
       {/* Content - Right side */}
       <div className="flex-1 min-w-0">
         <div className="flex items-start justify-between gap-2 mb-1">
-          <h3 className={`${isFullWidth ? "text-lg" : "text-base"} font-semibold text-slate-900`}>
+          <h3 className={`${isFullWidth ? "text-lg" : "text-base"} font-semibold text-foreground`}>
             {review.title}
           </h3>
           {review.rating && (
-            <span className={`${isFullWidth ? "text-base" : "text-sm"} font-medium text-slate-600 flex-shrink-0`}>
+            <span className={`${isFullWidth ? "text-base" : "text-sm"} font-medium text-foreground flex-shrink-0`}>
               {review.rating}/10
             </span>
           )}
@@ -56,10 +58,10 @@ export default function MediaReviewCard({ review, span = 3 }: MediaReviewCardPro
             {review.type}
           </span>
           {review.date && (
-            <span className={`${isFullWidth ? "text-xs" : "text-xs"} text-slate-500`}>{review.date}</span>
+            <span className={`${isFullWidth ? "text-xs" : "text-xs"} text-foreground`}>{review.date}</span>
           )}
         </div>
-        <p className={`${textSize} text-slate-700 leading-relaxed`}>
+        <p className={`${textSize} text-foreground leading-relaxed`}>
           {review.review}
         </p>
       </div>

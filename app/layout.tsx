@@ -18,7 +18,7 @@ const ebGaramond = EB_Garamond({
 const siteUrl = "https://divijmuthu.github.io";
 
 export const metadata: Metadata = {
-  title: "Divij Muthu - EECS Student at UC Berkeley | Research & Portfolio",
+  title: "Divij Muthu's Website",
   description: "Divij Muthu is a Computer Science student at UC Berkeley working on 3D image reconstruction via ultrasound transducers and compressed sensing. Research in Liwei Lin Lab, IEEE MEMS 2026 accepted paper.",
   keywords: ["Divij Muthu", "UC Berkeley", "EECS", "Computer Science", "IEEE MEMS 2026", "3D Image Reconstruction", "Compressed Sensing", "Signal Processing", "Machine Learning"],
   authors: [{ name: "Divij Muthu" }],
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-    title: "Divij Muthu - EECS Student at UC Berkeley",
+    title: "Divij Muthu's Website",
     description: "Research portfolio of Divij Muthu - Computer Science student at UC Berkeley working on 3D image reconstruction and signal processing.",
-    siteName: "Divij Muthu Portfolio",
+    siteName: "Divij Muthu's Website",
     images: [
       {
         url: `${siteUrl}/images/profile.jpg`,
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Divij Muthu - EECS Student at UC Berkeley",
+    title: "Divij Muthu's Website",
     description: "Research portfolio of Divij Muthu - Computer Science student at UC Berkeley.",
     images: [`${siteUrl}/images/profile.jpg`],
   },
@@ -94,6 +94,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Initialize theme before React hydrates to avoid visual flash. */}
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var stored=localStorage.getItem('theme');var prefersDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;var theme=(stored==='dark'||stored==='light')?stored:(prefersDark?'dark':'light');document.documentElement.dataset.theme=theme;}catch(e){}})();`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}

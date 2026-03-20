@@ -18,13 +18,13 @@ export default function Hobbies({ hobbies }: HobbiesProps) {
       {hobbyList.map((hobby, idx) => (
         <div
           key={idx}
-          className="p-5 bg-slate-50 border border-slate-200 rounded-lg hover:bg-slate-100 transition-colors"
+          className="p-5 bg-[var(--sidebar-bg)] border border-[var(--border-color)] rounded-lg hover:brightness-105 transition-colors"
         >
-          <h3 className="text-base font-semibold text-slate-900 mb-2">
+          <h3 className="text-base font-semibold text-foreground mb-2">
             {hobby.name}
           </h3>
           {hobby.description && (
-            <p className="text-sm text-slate-600 leading-relaxed">
+            <p className="text-sm text-foreground leading-relaxed">
               {hobby.description}
             </p>
           )}

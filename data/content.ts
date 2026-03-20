@@ -69,12 +69,13 @@ export const content: Content = {
   profile: {
     name: "Divij Muthu",
     tagline: "Studying EECS at UC Berkeley",
-    bio: "Hi! I'm Divij Muthu, currently a sophomore studying Electrical Engineering and Computer Sciences at UC Berkeley. I'm working on 3D image reconstruction via PMUTs in the Liwei Lin Lab, and I'm interested in signal processing, machine learning, practical hardware incorporating sensors & MEMS devices e.g. PMUTs, and software development.",
+    bio: "Hi! I'm Divij Muthu, and I'm currently studying Electrical Engineering and Computer Sciences at UC Berkeley. I'm working on 3D image reconstruction via PMUTs in the Liwei Lin Lab, and I've developed software for a startup and a career consulting firm. I'm interested in (digital) signal processing, machine learning, and software development for physical products and digital services.",
     image: "/images/profile.jpg",
     hobbies: ["Badminton", "Video Games", "Music"],
     social: {
       github: "https://github.com/divijmuthu",
       linkedin: "https://www.linkedin.com/in/divij-muthu",
+      scholar: "https://scholar.google.com/citations?user=8s-pOzoAAAAJ&hl=en",
       email: "divij_muthu@berkeley.edu",
     },
   },
@@ -86,8 +87,8 @@ export const content: Content = {
       venue: "IEEE MEMS 2026",
       description: "A novel system for 3D image reconstruction via ultrasound transducers and compressed sensing.",
       links: [
-        // { name: "Paper", url: "https://drive.google.com/file/d/1vQMwxJSRwGlUDrlGdhpbOuK76OzTVRa2/view?usp=sharing" },
-        // { name: "IEEE MEMS 2026", url: "https://mems26.org" },
+        { name: "Paper", url: "https://ieeexplore.ieee.org/document/11419480" },
+        //{ name: "IEEE MEMS 2026", url: "https://mems26.org" },
       ],
       tags: ["Compressed Sensing", "Convex Optimization", "Computational Imaging", "MEMS", "Ultrasound", "Signal Processing"],
     },

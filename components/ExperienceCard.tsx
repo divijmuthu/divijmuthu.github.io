@@ -8,43 +8,43 @@ interface ExperienceCardProps {
 
 export default function ExperienceCard({ experience }: ExperienceCardProps) {
   return (
-    <div className="mb-8 pb-8 border-b border-slate-200/60 last:border-b-0">
+    <div className="mb-8 pb-8 border-b border-[var(--border-color)] last:border-b-0">
       {/* Title and Company */}
       <div className="mb-2">
-        <h3 className="text-xl font-bold text-slate-900 inline">
+        <h3 className="text-xl font-bold text-foreground inline">
           {experience.title}
         </h3>
-        <span className="text-slate-600 mx-2">•</span>
+        <span className="text-foreground mx-2">•</span>
         {experience.link ? (
           <a
             href={experience.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xl text-slate-700 font-medium hover:text-slate-900 underline inline-flex items-center gap-1 transition-colors"
+            className="text-xl text-foreground font-medium hover:opacity-80 underline inline-flex items-center gap-1 transition-opacity"
           >
             {experience.company}
             <ExternalLink className="w-4 h-4 inline" />
           </a>
         ) : (
-          <span className="text-xl text-slate-700 font-medium">
+          <span className="text-xl text-foreground font-medium">
             {experience.company}
           </span>
         )}
         {experience.location && (
           <>
-            <span className="text-slate-600 mx-2">•</span>
-            <span className="text-base text-slate-600">{experience.location}</span>
+            <span className="text-foreground mx-2">•</span>
+            <span className="text-base text-foreground">{experience.location}</span>
           </>
         )}
       </div>
 
       {/* Date */}
-      <p className="text-base text-slate-500 mb-3 italic">{experience.date}</p>
+      <p className="text-base text-foreground mb-3 italic">{experience.date}</p>
 
       {/* Description Bullets */}
       <ul className="list-disc list-inside mb-3 space-y-2">
         {experience.description.map((bullet, idx) => (
-          <li key={idx} className="text-base text-slate-700 leading-relaxed">
+          <li key={idx} className="text-base text-foreground leading-relaxed">
             {bullet}
           </li>
         ))}

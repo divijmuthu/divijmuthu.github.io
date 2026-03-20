@@ -19,7 +19,7 @@ export default function Home() {
             id="highlights"
             className="mb-12 section-gradient rounded-2xl p-8 shadow-lg backdrop-blur-sm"
           >
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 pb-3 border-b border-slate-200">
+            <h2 className="text-3xl font-bold text-foreground mb-6 pb-3 border-b border-[var(--border-color)]">
               Highlights
             </h2>
             <Highlights highlights={content.highlights} />
@@ -30,7 +30,7 @@ export default function Home() {
             id="research"
             className="mb-12 section-gradient rounded-2xl p-8 shadow-lg backdrop-blur-sm"
           >
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 pb-3 border-b border-slate-200">
+            <h2 className="text-3xl font-bold text-foreground mb-6 pb-3 border-b border-[var(--border-color)]">
               Research
             </h2>
             <div>
@@ -45,7 +45,7 @@ export default function Home() {
             id="projects"
             className="mb-12 section-gradient rounded-2xl p-8 shadow-lg backdrop-blur-sm"
           >
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 pb-3 border-b border-slate-200">
+            <h2 className="text-3xl font-bold text-foreground mb-6 pb-3 border-b border-[var(--border-color)]">
               Projects
             </h2>
             <div>
@@ -60,7 +60,7 @@ export default function Home() {
             id="experience"
             className="mb-12 section-gradient rounded-2xl p-8 shadow-lg backdrop-blur-sm"
           >
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 pb-3 border-b border-slate-200">
+            <h2 className="text-3xl font-bold text-foreground mb-6 pb-3 border-b border-[var(--border-color)]">
               Experience
             </h2>
             <div>
@@ -76,7 +76,7 @@ export default function Home() {
               id="media-reviews"
               className="mb-12 section-gradient rounded-2xl p-8 shadow-lg backdrop-blur-sm"
             >
-              <h2 className="text-3xl font-bold text-slate-900 mb-6 pb-3 border-b border-slate-200">
+              <h2 className="text-3xl font-bold text-foreground mb-6 pb-3 border-b border-[var(--border-color)]">
                 Media Reviews
               </h2>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">

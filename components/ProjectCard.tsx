@@ -11,7 +11,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const primaryLink = project.links[0];
 
   return (
-    <div className="flex flex-col lg:flex-row gap-4 mb-8 pb-8 border-b border-slate-200/60 last:border-b-0">
+    <div className="flex flex-col lg:flex-row gap-4 mb-8 pb-8 border-b border-[var(--border-color)] last:border-b-0">
       {/* Thumbnail - 25% on desktop */}
       <div className="flex-shrink-0 w-full lg:w-1/4">
         {primaryLink ? (
@@ -44,13 +44,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       {/* Content - 75% on desktop */}
       <div className="flex-1 lg:w-3/4">
         {/* Title */}
-        <h3 className="text-xl font-bold text-slate-900 mb-2">
+        <h3 className="text-xl font-bold text-foreground mb-2">
           {primaryLink ? (
             <a
               href={primaryLink.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-slate-700 flex items-center gap-1"
+              className="hover:opacity-80 flex items-center gap-1"
             >
               {project.title}
               <ExternalLink className="w-5 h-5 inline" />
@@ -61,14 +61,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </h3>
 
         {/* Authors */}
-        <p className="text-base text-slate-600 mb-2">
+        <p className="text-base text-foreground mb-2">
           {project.authors.split(", ").map((author, idx, arr) => {
             const isBold = author === "Divij Muthu" || author.startsWith("Divij Muthu");
             const isLast = idx === arr.length - 1;
             return (
               <span key={idx}>
                 {isBold ? (
-                  <strong className="font-semibold text-slate-900">{author}</strong>
+                  <strong className="font-semibold text-foreground">{author}</strong>
                 ) : (
                   author
                 )}
@@ -92,7 +92,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-base text-slate-600 hover:text-slate-900 underline"
+                className="text-base text-foreground hover:opacity-80 underline"
               >
                 [{link.name}]
               </a>
@@ -101,7 +101,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         )}
 
         {/* Abstract */}
-        <p className="text-base text-slate-700 leading-relaxed mt-2">{project.description}</p>
+        <p className="text-base text-foreground leading-relaxed mt-2">{project.description}</p>
 
         {/* Tags */}
         {project.tags.length > 0 && (
