@@ -145,9 +145,9 @@ export const content: Content = {
       date: "December 2025 - Present",
       link: "https://www.topseedscoach.com",
       description: [
-        "Developing an AI-powered executive recruiting platform using React and Node.js, integrating the Gemini LLM API to automate screening various roles for candidate fit and generate natural language advice on pursuing these openings.",
-        "Engineering secure backend microservices to synchronize live data with Google Sheets and Excel Online, implementing OAuth 2.0 authentication flows to ensure data integrity and security.",
-        "Collaborating on the full-stack architecture for a system designed to process 50+ candidates weekly, optimizing database interactions to reduce latency in candidate-to-recruiter matching.",
+        "Architecting an efficient executive recruiting platform on Google Cloud (GCP), integrating the Gemini LLM API via Vertex AI to automate analysis for 1000s of resumes & LinkedIn profiles according to type-safe Pydantic schemas.",
+        "Engineering backend services to support the core pipeline from resume & connections to scored job openings on Firestore, such as a synonym database for key terms e.g. titles & employers, and a vector database for job queries to support RAG.",
+        "Implementing OAuth 2.0 authentication flows to ensure integrity and security for sensitive user information (PII).",
       ],
       tags: ["React", "Node.js", "Gemini LLM API", "OAuth 2.0", "Full-Stack"],
     },
