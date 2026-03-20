@@ -107,7 +107,7 @@ export const content: Content = {
     },
     {
       title: "Secure File Sharing System",
-      thumbnail: "/images/ddos-research.png",
+      thumbnail: "/images/project1.png",
       authors: "",
       venue: "CS161: Computer Security",
       description: "Developed a secure file sharing system using Golang and a provided cryptographic library with AES-256 symmetric encryption and HMAC-SHA256 authentication, as well as RSA-2048 asymmetric encryption and Digital Signatures. Allows users to create accounts, store and efficiently append to files, and both share and revoke access to their files in a manner secure from adversaries who can read \& manipulate the underlying database as well as hostile revoked users who seek to regain access. Developed thorough testing suite with Ginkgo to ensure system functionality and security against typical attacks based on our threat model.",
