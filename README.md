@@ -47,6 +47,20 @@ The site is configured for static export. After building, the `out` folder conta
 
 The included `.github/workflows/deploy.yml` workflow will automatically build and deploy on push to main.
 
+## Private visitor analytics (optional, free)
+
+This repo can load **Google Analytics 4** (GA4) — **free** for normal personal-site traffic. You only see stats after logging into [Google Analytics](https://analytics.google.com); **nothing** is displayed on the site itself. Reports include **rough geography** (country/region/city level), pages, and traffic sources.
+
+1. In GA4: **Admin → Data streams → Add stream → Web** → set URL to **`https://divijmuthu.github.io`** and copy the **Measurement ID** (`G-XXXXXXXXXX`).
+2. **Local:** copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX`.
+3. **GitHub Actions:** **Settings → Secrets and variables → Actions → Variables** → add **`GA_MEASUREMENT_ID`** = your `G-…` id (the workflow maps it to the build).
+
+If unset, **no analytics script** is included.
+
+### Can we skip any service entirely?
+
+**Not really, if you want geography.** GitHub Pages only serves static files — there is **no server** to log visits. Something has to receive page-view events (GA4, Cloudflare Web Analytics, self-hosted Umami on a VPS, etc.). The lightest free options are usually **GA4** or **[Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/)** (also free; different setup).
+
 ## Project Structure
 
 ```

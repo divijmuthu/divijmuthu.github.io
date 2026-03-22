@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cinzel, EB_Garamond } from "next/font/google";
 import "./globals.css";
 import { content } from "@/data/content";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const cinzel = Cinzel({ 
   subsets: ["latin"],
@@ -106,7 +107,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
       </head>
-      <body className={`${ebGaramond.variable} ${cinzel.variable} ${ebGaramond.className}`}>{children}</body>
+      <body className={`${ebGaramond.variable} ${cinzel.variable} ${ebGaramond.className}`}>
+        <GoogleAnalytics />
+        {children}
+      </body>
     </html>
   );
 }
