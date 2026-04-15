@@ -153,8 +153,11 @@ export default function Sidebar() {
         </div>
 
         {/* Name */}
-        <h1 className="text-3xl font-bold text-foreground mb-3 text-center lg:text-left">
-          {profile.name}
+        <h1 className="text-foreground mb-3 text-center lg:text-left flex flex-wrap items-baseline justify-center lg:justify-start gap-x-2">
+          <span className="text-xl font-normal">{"Hi, I'm "}</span>
+          <span className="text-3xl font-bold uppercase tracking-tight">
+            {profile.name}
+          </span>
         </h1>
 
         {/* Social Links */}
