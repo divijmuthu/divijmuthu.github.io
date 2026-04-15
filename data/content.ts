@@ -69,7 +69,7 @@ export const content: Content = {
   profile: {
     name: "Divij Muthu",
     tagline: "Studying EECS at UC Berkeley",
-    bio: "Hi! I'm Divij Muthu, and I'm currently studying Electrical Engineering and Computer Sciences at UC Berkeley. I'm working on 3D image reconstruction via PMUTs in the Liwei Lin Lab, and I've developed software for a startup and a career consulting firm. I'm interested in (digital) signal processing, machine learning, and software development for physical products and digital services.",
+    bio: "Hi! I'm currently studying Electrical Engineering and Computer Sciences at UC Berkeley. I'm working on 3D image reconstruction via PMUTs in the Liwei Lin Lab, and I've developed software for a startup and a career consulting firm. I'm interested in (digital) signal processing, machine learning, and software development for low-level systems and digital services.",
     image: "/images/profile.jpg",
     hobbies: ["Badminton", "Video Games", "Music"],
     social: {
@@ -191,6 +191,14 @@ export const content: Content = {
   ],
   highlights: [
     {
+      date: "May 2026",
+      description: "I'll be interning as an Audio Algorithm & DSP SWE at ",
+      link: {
+        text: "Lucid Motors",
+        url: "https://lucidmotors.com",
+      },
+    },
+    {
       date: "Oct. 2025",
       description: "A paper was accepted for an oral presentation at ",
       link: {
@@ -206,6 +214,14 @@ export const content: Content = {
         url: "https://lukhanin.net/images/dmRice.jpeg",
       },
     },
+    {
+      date: "Apr. 2025",
+      description: "I joined the Liwei Lin Lab to work with the amazing ",
+      link: {
+        text: "Nikita Lukhanin",
+        url: "https://lukhanin.net",
+      },
+    }
   ],
   mediaReviews: [
     // Add your media reviews here!
