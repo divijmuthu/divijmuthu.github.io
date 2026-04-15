@@ -69,7 +69,7 @@ export const content: Content = {
   profile: {
     name: "Divij Muthu",
     tagline: "Studying EECS at UC Berkeley",
-    bio: "I'm currently studying Electrical Engineering and Computer Sciences at UC Berkeley. I'm working on 3D image reconstruction via PMUTs in the Liwei Lin Lab, and I've developed software for a startup and a career consulting firm. I'm interested in (digital) signal processing, machine learning, and software development for low-level systems and digital services.",
+    bio: "Hi! I'm currently studying Electrical Engineering and Computer Sciences at UC Berkeley. I'm working on 3D image reconstruction via PMUTs in the Liwei Lin Lab, and I've developed software for a startup and a career consulting firm. I'm interested in (digital) signal processing, machine learning, and software development for low-level systems and digital services.",
     image: "/images/profile.jpg",
     hobbies: ["Badminton", "Video Games", "Music"],
     social: {

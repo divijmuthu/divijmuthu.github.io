@@ -153,16 +153,17 @@ export default function Sidebar() {
         </div>
 
         {/* Name */}
+        <h1 className="text-3xl font-bold text-foreground mb-3 text-center lg:text-left">
+          {profile.name}
+        </h1>
+        {/*
         <h1 className="text-foreground mb-3 text-center lg:text-left flex flex-wrap items-baseline justify-center lg:justify-start gap-x-2">
-          <span
-            className="text-xl font-normal normal-case [font-family:var(--font-eb-garamond),Georgia,serif]"
-          >
+          <span className="text-xl font-normal normal-case [font-family:var(--font-eb-garamond),Georgia,serif]">
             {"Hi, I'm "}
           </span>
-          <span className="text-3xl font-bold uppercase tracking-tight">
-            {profile.name}
-          </span>
+          <span className="text-3xl font-bold uppercase tracking-tight">{profile.name}</span>
         </h1>
+        */}
 
         {/* Social Links */}
         <div className="flex gap-4 justify-center lg:justify-start mb-4">
