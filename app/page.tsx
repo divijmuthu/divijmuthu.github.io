@@ -3,6 +3,7 @@ import ProjectCard from "@/components/ProjectCard";
 import ExperienceCard from "@/components/ExperienceCard";
 import Highlights from "@/components/Highlights";
 import MediaReviewCard from "@/components/MediaReviewCard";
+import TechnicalBookCard from "@/components/TechnicalBookCard";
 import { content } from "@/data/content";
 
 export default function Home() {
@@ -70,20 +71,41 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Media Reviews Section */}
-          {content.mediaReviews && content.mediaReviews.length > 0 && (
+          {/* Extras: technical books & media reviews */}
+          {((content.technicalBooks && content.technicalBooks.length > 0) ||
+            (content.mediaReviews && content.mediaReviews.length > 0)) && (
             <section
-              id="media-reviews"
+              id="extras"
               className="mb-12 section-gradient rounded-2xl p-8 shadow-lg backdrop-blur-sm"
             >
-              <h2 className="text-3xl font-bold text-foreground mb-6 pb-3 border-b border-[var(--border-color)]">
-                Media Reviews
-              </h2>
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-                {content.mediaReviews.map((review, idx) => (
-                  <MediaReviewCard key={idx} review={review} span={review.span || 3} />
-                ))}
-              </div>
+              {content.technicalBooks && content.technicalBooks.length > 0 && (
+                <div
+                  className={
+                    content.mediaReviews && content.mediaReviews.length > 0 ? "mb-10" : ""
+                  }
+                >
+                  <h2 className="text-3xl font-bold text-foreground mb-6 pb-3 border-b border-[var(--border-color)]">
+                    Technical Books &amp; Notes
+                  </h2>
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                    {content.technicalBooks.map((book, idx) => (
+                      <TechnicalBookCard key={idx} book={book} span={book.span || 3} />
+                    ))}
+                  </div>
+                </div>
+              )}
+              {content.mediaReviews && content.mediaReviews.length > 0 && (
+                <div>
+                  <h2 className="text-3xl font-bold text-foreground mb-6 pb-3 border-b border-[var(--border-color)]">
+                    Media Reviews
+                  </h2>
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                    {content.mediaReviews.map((review, idx) => (
+                      <MediaReviewCard key={idx} review={review} span={review.span || 3} />
+                    ))}
+                  </div>
+                </div>
+              )}
             </section>
           )}
         </main>

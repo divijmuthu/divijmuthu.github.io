@@ -23,6 +23,19 @@ export interface MediaReview {
   span?: 1 | 2 | 3; // Number of columns to span (1 = 1/3, 2 = 2/3, 3 = full width). Defaults to 1.
 }
 
+export interface TechnicalBook {
+  title: string;
+  icon?: string; // Path to icon/image (e.g. /images/books/cpp-logo.svg)
+  /** Short inline notes. Use lines starting with "- ", "* ", or "•" for simple bullets. */
+  notes?: string;
+  /** PDF (or any URL) for full write-ups — e.g. put files in /public/notes/ and use /notes/kr.pdf */
+  notesUrl?: string;
+  /** Link text when notesUrl is set (default in UI: "View notes (PDF)") */
+  notesUrlLabel?: string;
+  date?: string;
+  span?: 1 | 2 | 3;
+}
+
 export interface Profile {
   name: string;
   tagline: string;
@@ -62,6 +75,7 @@ export interface Content {
   projects: Project[];
   experiences: Experience[];
   highlights: Highlight[];
+  technicalBooks: TechnicalBook[];
   mediaReviews: MediaReview[];
 }
 
@@ -222,6 +236,20 @@ export const content: Content = {
         url: "https://lukhanin.net",
       },
     }
+  ],
+  technicalBooks: [
+    {
+      title: "A Tour of C++, 3rd Edition (Coming Soon!)",
+      icon: "/images/books/cpp-logo.svg",
+      span: 3,
+      // notesUrl: "/notes/tour-of-cpp.pdf",
+    },
+    {
+      title: "The C Programming Language 2nd Edition(K&R)",
+      icon: "/images/books/c-logo.svg",
+      span: 3,
+      notesUrl: "/notes/KRC_v2.pdf",
+    },
   ],
   mediaReviews: [
     // Add your media reviews here!

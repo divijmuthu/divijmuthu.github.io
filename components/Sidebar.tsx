@@ -39,7 +39,7 @@ export default function Sidebar() {
   };
 
   useEffect(() => {
-    const sections = ["highlights", "research", "projects", "experience", "media-reviews"];
+    const sections = ["highlights", "research", "projects", "experience", "extras"];
     
     const observerOptions = {
       root: null,
@@ -105,8 +105,9 @@ export default function Sidebar() {
     { id: "research", label: "Research" },
     { id: "projects", label: "Projects" },
     { id: "experience", label: "Experience" },
-    ...(content.mediaReviews && content.mediaReviews.length > 0
-      ? [{ id: "media-reviews", label: "Extras" }]
+    ...((content.mediaReviews && content.mediaReviews.length > 0) ||
+    (content.technicalBooks && content.technicalBooks.length > 0)
+      ? [{ id: "extras", label: "Extras" }]
       : []),
   ];
 
