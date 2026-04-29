@@ -5,6 +5,22 @@ import Image from "next/image";
 import { content } from "@/data/content";
 import { Github, Mail, Linkedin, GraduationCap, FileText, Sun, Moon } from "lucide-react";
 
+function getSidebarNavItems() {
+  const items: { id: string; label: string }[] = [
+    { id: "highlights", label: "Highlights" },
+    { id: "research", label: "Research" },
+    { id: "projects", label: "Projects" },
+    { id: "experience", label: "Experience" },
+  ];
+  if (content.technicalBooks?.length) {
+    items.push({ id: "notes", label: "Notes" });
+  }
+  if (content.mediaReviews?.length) {
+    items.push({ id: "extras", label: "Extras" });
+  }
+  return items;
+}
+
 export default function Sidebar() {
   const { profile } = content;
   const [activeSection, setActiveSection] = useState<string>("highlights");
@@ -39,7 +55,7 @@ export default function Sidebar() {
   };
 
   useEffect(() => {
-    const sections = ["highlights", "research", "projects", "experience", "extras"];
+    const sections = getSidebarNavItems().map((item) => item.id);
     
     const observerOptions = {
       root: null,
@@ -100,16 +116,7 @@ export default function Sidebar() {
     });
   };
 
-  const navItems = [
-    { id: "highlights", label: "Highlights" },
-    { id: "research", label: "Research" },
-    { id: "projects", label: "Projects" },
-    { id: "experience", label: "Experience" },
-    ...((content.mediaReviews && content.mediaReviews.length > 0) ||
-    (content.technicalBooks && content.technicalBooks.length > 0)
-      ? [{ id: "extras", label: "Extras" }]
-      : []),
-  ];
+  const navItems = getSidebarNavItems();
 
   return (
     <aside
