@@ -26,13 +26,13 @@ export default function Home() {
             <Highlights highlights={content.highlights} />
           </section>
 
-          {/* Research Section */}
+          {/* Publications Section */}
           <section
-            id="research"
+            id="publications"
             className="mb-12 section-gradient rounded-2xl p-8 shadow-lg backdrop-blur-sm"
           >
             <h2 className="text-3xl font-bold text-foreground mb-6 pb-3 border-b border-[var(--border-color)]">
-              Research
+              Publications
             </h2>
             <div>
               {content.research.map((project, idx) => (

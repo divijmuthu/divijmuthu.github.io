@@ -8,7 +8,7 @@ import { Github, Mail, Linkedin, GraduationCap, FileText, Sun, Moon } from "luci
 function getSidebarNavItems() {
   const items: { id: string; label: string }[] = [
     { id: "highlights", label: "Highlights" },
-    { id: "research", label: "Research" },
+    { id: "publications", label: "Publications" },
     { id: "projects", label: "Projects" },
     { id: "experience", label: "Experience" },
   ];
