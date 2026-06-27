@@ -95,11 +95,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Initialize theme before React hydrates to avoid visual flash. */}
+        {/* Initialize the time-of-day theme before React hydrates to avoid a flash. */}
         <script
           type="text/javascript"
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var stored=localStorage.getItem('theme');var prefersDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;var theme=(stored==='dark'||stored==='light')?stored:(prefersDark?'dark':'light');document.documentElement.dataset.theme=theme;}catch(e){}})();`,
+            __html: `(function(){try{function phase(t){return t<0.45?'light':(t<0.72?'evening':'dark');}var tod=parseFloat(localStorage.getItem('timeOfDay'));if(isNaN(tod)){var legacy=localStorage.getItem('theme');if(legacy==='dark'){tod=0.9;}else if(legacy==='light'){tod=0.18;}else{var prefersDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;tod=prefersDark?0.9:0.18;}}var el=document.documentElement;el.dataset.theme=phase(tod);el.style.setProperty('--time-of-day',String(tod));}catch(e){}})();`,
           }}
         />
         <script

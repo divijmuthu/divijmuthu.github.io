@@ -1,5 +1,4 @@
 import { Experience } from "@/data/content";
-import Badge from "./Badge";
 import { ExternalLink } from "lucide-react";
 
 interface ExperienceCardProps {
@@ -8,7 +7,7 @@ interface ExperienceCardProps {
 
 export default function ExperienceCard({ experience }: ExperienceCardProps) {
   return (
-    <div className="mb-8 pb-8 border-b border-[var(--border-color)] last:border-b-0">
+    <div className="item-card p-5 mb-5 last:mb-0">
       {/* Title and Company */}
       <div className="mb-2">
         <h3 className="text-xl font-bold text-foreground inline">
@@ -42,22 +41,13 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
       <p className="text-base text-foreground mb-3 italic">{experience.date}</p>
 
       {/* Description Bullets */}
-      <ul className="list-disc list-inside mb-3 space-y-2">
+      <ul className="list-disc list-inside space-y-2">
         {experience.description.map((bullet, idx) => (
           <li key={idx} className="text-base text-foreground leading-relaxed">
             {bullet}
           </li>
         ))}
       </ul>
-
-      {/* Tags */}
-      {experience.tags && experience.tags.length > 0 && (
-        <div className="flex flex-wrap gap-1.5 mt-3">
-          {experience.tags.map((tag, idx) => (
-            <Badge key={idx}>{tag}</Badge>
-          ))}
-        </div>
-      )}
     </div>
   );
 }

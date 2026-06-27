@@ -4,21 +4,25 @@ import ExperienceCard from "@/components/ExperienceCard";
 import Highlights from "@/components/Highlights";
 import MediaReviewCard from "@/components/MediaReviewCard";
 import TechnicalBookCard from "@/components/TechnicalBookCard";
+import AmbientProvider, { SkyBand } from "@/components/AmbientBackground";
 import { content } from "@/data/content";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <div className="flex flex-col lg:flex-row">
-        {/* Left Column - Sidebar */}
-        <Sidebar />
+    <AmbientProvider>
+      <div className="relative min-h-screen">
+        <div className="relative z-10 flex flex-col lg:flex-row lg:items-stretch">
+          {/* Left Column - Sidebar */}
+          <Sidebar />
 
-        {/* Right Column - Scrollable Content */}
-        <main className="flex-1 lg:w-2/3 xl:w-3/4 p-6 lg:p-12">
+          {/* Right Column - sky band + scrollable content */}
+          <main className="flex min-w-0 flex-1 flex-col lg:w-2/3 xl:w-3/4">
+            <SkyBand />
+            <div className="flex-1 -mt-2 px-6 pb-6 pt-0 lg:px-12 lg:pb-12">
           {/* Highlights Section */}
           <section
             id="highlights"
-            className="mb-12 section-gradient rounded-2xl p-8 shadow-lg backdrop-blur-sm"
+            className="mb-12 section-gradient rounded-2xl border-t-transparent p-8 shadow-lg backdrop-blur-sm"
           >
             <h2 className="text-3xl font-bold text-foreground mb-6 pb-3 border-b border-[var(--border-color)]">
               Highlights
@@ -104,9 +108,11 @@ export default function Home() {
               </div>
             </section>
           )}
-        </main>
+            </div>
+          </main>
+        </div>
       </div>
-    </div>
+    </AmbientProvider>
   );
 }
 

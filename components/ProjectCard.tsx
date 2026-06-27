@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Project } from "@/data/content";
-import Badge from "./Badge";
 import { ExternalLink } from "lucide-react";
 
 interface ProjectCardProps {
@@ -11,7 +10,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const primaryLink = project.links[0];
 
   return (
-    <div className="flex flex-col lg:flex-row gap-4 mb-8 pb-8 border-b border-[var(--border-color)] last:border-b-0">
+    <div className="item-card flex flex-col lg:flex-row gap-4 p-5 mb-5 last:mb-0">
       {/* Thumbnail - 25% on desktop */}
       <div className="flex-shrink-0 w-full lg:w-1/4">
         {primaryLink ? (
@@ -78,11 +77,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           })}
         </p>
 
-        {/* Venue */}
-        <div className="mb-2">
-          <Badge variant="subtitle">{project.venue}</Badge>
-        </div>
-
         {/* Links */}
         {project.links.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-3">
@@ -102,15 +96,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         {/* Abstract */}
         <p className="text-base text-foreground leading-relaxed mt-2">{project.description}</p>
-
-        {/* Tags */}
-        {project.tags.length > 0 && (
-          <div className="flex flex-wrap gap-1.5 mt-3">
-            {project.tags.map((tag, idx) => (
-              <Badge key={idx}>{tag}</Badge>
-            ))}
-          </div>
-        )}
       </div>
     </div>
   );

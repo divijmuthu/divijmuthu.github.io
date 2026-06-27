@@ -53,14 +53,11 @@ export default function MediaReviewCard({ review, span = 3 }: MediaReviewCardPro
             </span>
           )}
         </div>
-        <div className="flex items-center gap-2 mb-2">
-          <span className={`${isFullWidth ? "text-xs" : "text-xs"} px-2 py-0.5 bg-slate-200 text-slate-700 rounded`}>
-            {review.type}
-          </span>
-          {review.date && (
-            <span className={`${isFullWidth ? "text-xs" : "text-xs"} text-foreground`}>{review.date}</span>
-          )}
-        </div>
+        {review.date && (
+          <div className="flex items-center gap-2 mb-2">
+            <span className="text-xs text-foreground/70">{review.date}</span>
+          </div>
+        )}
         <p className={`${textSize} text-foreground leading-relaxed`}>
           {review.review}
         </p>

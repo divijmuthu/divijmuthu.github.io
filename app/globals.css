@@ -3,59 +3,89 @@
 @tailwind utilities;
 
 :root {
-  --background: #f8fafc;
+  --background: #eaf4fb;
   --foreground: #0f172a;
   --gradient-start: #f1f5f9;
   --gradient-mid: #e2e8f0;
   --gradient-end: #cbd5e1;
   --sidebar-bg: #ffffff;
-  --section-bg: rgba(255, 255, 255, 0.7);
-  --border-color: #e2e8f0;
+  /* Exterior section shell: intentionally see-through so the water shows behind. */
+  --section-bg: rgba(255, 255, 255, 0.34);
+  --section-blur: 4px;
+  /* Interior item layer: fully opaque so individual entries stay crisp + readable. */
+  --item-bg: #ffffff;
+  --item-border: rgba(15, 23, 42, 0.08);
+  --border-color: rgba(226, 232, 240, 0.8);
+  --accent: #2f6f97;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0f172a;
+    --background: #0b1a33;
     --foreground: #f8fafc;
     --gradient-start: #1e293b;
     --gradient-mid: #334155;
     --gradient-end: #475569;
-    --sidebar-bg: #1e293b;
-    --section-bg: rgba(30, 41, 59, 0.7);
-    --border-color: #334155;
+    --sidebar-bg: #16243b;
+    --section-bg: rgba(15, 26, 46, 0.34);
+    --item-bg: #16243b;
+    --item-border: rgba(148, 163, 184, 0.16);
+    --border-color: rgba(51, 65, 85, 0.7);
+    --accent: #9ec9e6;
   }
 }
 
 html[data-theme="light"] {
-  --background: #f8fafc;
+  --background: #eaf4fb;
   --foreground: #0f172a;
   --gradient-start: #f1f5f9;
   --gradient-mid: #e2e8f0;
   --gradient-end: #cbd5e1;
   --sidebar-bg: #ffffff;
-  --section-bg: rgba(255, 255, 255, 0.7);
-  --border-color: #e2e8f0;
+  --section-bg: rgba(255, 255, 255, 0.34);
+  --item-bg: #ffffff;
+  --item-border: rgba(15, 23, 42, 0.08);
+  --border-color: rgba(226, 232, 240, 0.8);
+  --accent: #2f6f97;
+}
+
+/* Evening keeps light text-on-light readability but warms the shell + accents. */
+html[data-theme="evening"] {
+  --background: #f7e3d0;
+  --foreground: #2b1a12;
+  --gradient-start: #fbe7d2;
+  --gradient-mid: #f3cba6;
+  --gradient-end: #e8a979;
+  --sidebar-bg: #fff6ee;
+  --section-bg: rgba(255, 246, 238, 0.36);
+  --item-bg: #fff7f0;
+  --item-border: rgba(120, 64, 32, 0.12);
+  --border-color: rgba(214, 168, 132, 0.7);
+  --accent: #c2622b;
 }
 
 html[data-theme="dark"] {
-  --background: #0f172a;
+  --background: #0b1a33;
   --foreground: #f8fafc;
   --gradient-start: #1e293b;
   --gradient-mid: #334155;
   --gradient-end: #475569;
-  --sidebar-bg: #1e293b;
-  --section-bg: rgba(30, 41, 59, 0.7);
-  --border-color: #334155;
+  --sidebar-bg: #16243b;
+  --section-bg: rgba(15, 26, 46, 0.34);
+  --item-bg: #16243b;
+  --item-border: rgba(148, 163, 184, 0.16);
+  --border-color: rgba(51, 65, 85, 0.7);
+  --accent: #9ec9e6;
 }
 
 body {
   color: var(--foreground);
-  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%);
-  background-attachment: fixed;
+  background: var(--background);
   font-family: var(--font-eb-garamond), 'Georgia', 'Times New Roman', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
+  transition: color 0.6s ease, background-color 0.6s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -66,29 +96,193 @@ h1, h2, h3, h4, h5, h6 {
   .text-balance {
     text-wrap: balance;
   }
-  
+
+  /* Translucent exterior shell for each section. */
   .section-gradient {
     background: var(--section-bg);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--section-blur));
+    -webkit-backdrop-filter: blur(var(--section-blur));
     border: 1px solid var(--border-color);
+    transition: background-color 0.5s ease, border-color 0.5s ease;
   }
-  
+
+  /* Opaque interior surface for individual entries / updates. */
+  .item-card {
+    background: var(--item-bg);
+    border: 1px solid var(--item-border);
+    border-radius: 0.85rem;
+    box-shadow: 0 6px 18px -12px rgba(15, 23, 42, 0.45);
+    transition: background-color 0.5s ease, border-color 0.5s ease,
+      color 0.5s ease;
+  }
+
   .sidebar-gradient {
-    background: linear-gradient(180deg, var(--sidebar-bg) 0%, rgba(255, 255, 255, 0.98) 100%);
+    background: var(--sidebar-bg);
+    transition: background-color 0.5s ease;
   }
-  
-  @media (prefers-color-scheme: dark) {
-    .sidebar-gradient {
-      background: linear-gradient(180deg, var(--sidebar-bg) 0%, rgba(30, 41, 59, 0.98) 100%);
-    }
+
+  /* Sketch-style bars: left point, chevron date divider, slanted right edge */
+  .highlight-bar {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    min-height: 2.75rem;
+    background: var(--item-bg);
+    clip-path: polygon(
+      0 50%,
+      12px 0,
+      100% 0,
+      calc(100% - 14px) 100%,
+      12px 100%
+    );
+    filter: drop-shadow(0 0 0 1px var(--item-border))
+      drop-shadow(0 3px 10px rgba(15, 23, 42, 0.1));
+    transition: background-color 0.5s ease, transform 0.2s ease, filter 0.2s ease;
+  }
+
+  .highlight-bar:hover {
+    transform: translateX(2px);
+    filter: drop-shadow(0 0 0 1px var(--item-border))
+      drop-shadow(0 4px 14px rgba(15, 23, 42, 0.14));
+  }
+
+  .highlight-bar__date {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    padding: 0.55rem 1.35rem 0.55rem 1.15rem;
+    margin-right: 0.35rem;
+    width: max-content;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--foreground);
+    background: color-mix(in srgb, var(--item-bg) 88%, var(--accent) 12%);
+    clip-path: polygon(
+      0 0,
+      calc(100% - 11px) 0,
+      100% 50%,
+      calc(100% - 11px) 100%,
+      0 100%
+    );
+  }
+
+  .highlight-bar__body {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.4rem;
+    min-width: 0;
+    padding: 0.55rem 1.5rem 0.55rem 0.75rem;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.45;
+    color: var(--foreground);
+  }
+
+  .highlight-bar__body a {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Left menu bars (same outer shape, no date divider) */
+  .nav-item {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    padding: 0.62rem 1.35rem 0.62rem 1.15rem;
+    color: var(--foreground);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    clip-path: polygon(
+      0 50%,
+      12px 0,
+      100% 0,
+      calc(100% - 14px) 100%,
+      12px 100%
+    );
+    filter: drop-shadow(0 0 0 1px color-mix(in srgb, var(--item-border) 70%, transparent));
+    transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease,
+      filter 0.3s ease;
+  }
+
+  .nav-item--inactive {
+    opacity: 0.6;
+  }
+
+  .nav-item--inactive:hover {
+    opacity: 0.9;
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+    filter: drop-shadow(0 0 0 1px color-mix(in srgb, var(--accent) 30%, transparent));
+  }
+
+  .nav-item--active {
+    opacity: 1;
+    font-weight: 600;
+    background: color-mix(in srgb, var(--accent) 18%, var(--item-bg));
+    filter: drop-shadow(0 0 0 1px color-mix(in srgb, var(--accent) 45%, transparent))
+      drop-shadow(0 0 14px color-mix(in srgb, var(--accent) 38%, transparent));
   }
 }
 
-html[data-theme="dark"] .sidebar-gradient {
-  background: linear-gradient(180deg, var(--sidebar-bg) 0%, rgba(30, 41, 59, 0.98) 100%);
+/* Gradual text-color shift everywhere as the time-of-day changes. */
+.item-card,
+.section-gradient,
+aside,
+p,
+span,
+li,
+h1, h2, h3, h4, h5, h6,
+a {
+  transition: color 0.5s ease;
 }
 
-html[data-theme="light"] .sidebar-gradient {
-  background: linear-gradient(180deg, var(--sidebar-bg) 0%, rgba(255, 255, 255, 0.98) 100%);
+/* ----- Drifting clouds ----- */
+@keyframes ambient-cloud-drift {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-24px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
+.ambient-cloud {
+  animation-name: ambient-cloud-drift;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-cloud {
+    animation: none;
+  }
+}
+
+/* Sky band: feather the bottom edge so no hard line against content below. */
+.ambient-band {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 72%,
+    rgba(0, 0, 0, 0.5) 88%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 72%,
+    rgba(0, 0, 0, 0.5) 88%,
+    transparent 100%
+  );
+}
