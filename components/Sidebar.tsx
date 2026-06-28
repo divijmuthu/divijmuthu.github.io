@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, type CSSProperties } from "react";
 import Image from "next/image";
 import { content } from "@/data/content";
 import { Github, Mail, Linkedin, GraduationCap, FileText } from "lucide-react";
@@ -82,6 +82,10 @@ export default function Sidebar() {
   }, []);
 
   const navItems = getSidebarNavItems();
+  const activeIndex = Math.max(
+    0,
+    navItems.findIndex((item) => item.id === activeSection)
+  );
 
   return (
     <aside className="lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto w-full lg:w-1/3 xl:w-1/4 sidebar-gradient p-6 lg:p-8 shadow-lg border-r border-[var(--border-color)]">
@@ -174,8 +178,25 @@ export default function Sidebar() {
         </p>
 
         {/* Navigation */}
-        <nav className="w-full mb-6">
-          <ul className="flex flex-col gap-2.5">
+        <nav
+          className="nav-rail-nav w-full mb-6"
+          style={{ "--nav-active-index": activeIndex } as CSSProperties}
+        >
+          <div className="nav-rail-nav__rail" aria-hidden>
+            <div className="nav-rail-nav__line" />
+            {navItems.map((item) => (
+              <div key={item.id} className="nav-rail-nav__marker-row">
+                {activeSection !== item.id && (
+                  <span className="nav-rail-nav__bead" />
+                )}
+              </div>
+            ))}
+            <div className="nav-rail-nav__orb">
+              <span className="nav-rail-nav__orb-core" />
+            </div>
+          </div>
+
+          <ul className="nav-rail-nav__items">
             {navItems.map((item) => {
               const isActive = activeSection === item.id;
               return (
