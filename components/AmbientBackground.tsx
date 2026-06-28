@@ -739,7 +739,7 @@ export function SkyBand() {
             </g>
             <g opacity={moonOpacity}>
               <path
-                d="M15.8 12.4A5.2 5.2 0 1 1 11.2 7.4a4 4 0 0 0 4.6 5z"
+                d="M18.5 12A7 7 0 1 1 9.8 5.5A5.4 5.4 0 0 0 18.5 12Z"
                 fill="rgba(255,255,255,0.92)"
                 stroke="none"
               />

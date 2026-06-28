@@ -4,6 +4,7 @@ import ExperienceCard from "@/components/ExperienceCard";
 import Highlights from "@/components/Highlights";
 import MediaReviewCard from "@/components/MediaReviewCard";
 import TechnicalBookCard from "@/components/TechnicalBookCard";
+import SectionHeading from "@/components/SectionHeading";
 import AmbientProvider, { SkyBand } from "@/components/AmbientBackground";
 import { content } from "@/data/content";
 
@@ -24,9 +25,7 @@ export default function Home() {
             id="highlights"
             className="mb-12 section-gradient rounded-2xl border-t-transparent p-8 shadow-lg backdrop-blur-sm"
           >
-            <h2 className="text-3xl font-bold text-foreground mb-6 pb-3 border-b border-[var(--border-color)]">
-              Highlights
-            </h2>
+            <SectionHeading>Highlights</SectionHeading>
             <Highlights highlights={content.highlights} />
           </section>
 
@@ -35,12 +34,10 @@ export default function Home() {
             id="publications"
             className="mb-12 section-gradient rounded-2xl p-8 shadow-lg backdrop-blur-sm"
           >
-            <h2 className="text-3xl font-bold text-foreground mb-6 pb-3 border-b border-[var(--border-color)]">
-              Publications
-            </h2>
+            <SectionHeading>Publications</SectionHeading>
             <div>
               {content.research.map((project, idx) => (
-                <ProjectCard key={idx} project={project} />
+                <ProjectCard key={idx} project={project} showVenue />
               ))}
             </div>
           </section>
@@ -50,9 +47,7 @@ export default function Home() {
             id="projects"
             className="mb-12 section-gradient rounded-2xl p-8 shadow-lg backdrop-blur-sm"
           >
-            <h2 className="text-3xl font-bold text-foreground mb-6 pb-3 border-b border-[var(--border-color)]">
-              Projects
-            </h2>
+            <SectionHeading>Projects</SectionHeading>
             <div>
               {content.projects.map((project, idx) => (
                 <ProjectCard key={idx} project={project} />
@@ -65,9 +60,7 @@ export default function Home() {
             id="experience"
             className="mb-12 section-gradient rounded-2xl p-8 shadow-lg backdrop-blur-sm"
           >
-            <h2 className="text-3xl font-bold text-foreground mb-6 pb-3 border-b border-[var(--border-color)]">
-              Experience
-            </h2>
+            <SectionHeading>Experience</SectionHeading>
             <div>
               {content.experiences.map((experience, idx) => (
                 <ExperienceCard key={idx} experience={experience} />
@@ -81,9 +74,7 @@ export default function Home() {
               id="notes"
               className="mb-12 section-gradient rounded-2xl p-8 shadow-lg backdrop-blur-sm"
             >
-              <h2 className="text-3xl font-bold text-foreground mb-6 pb-3 border-b border-[var(--border-color)]">
-                Notes
-              </h2>
+              <SectionHeading>Notes</SectionHeading>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                 {content.technicalBooks.map((book, idx) => (
                   <TechnicalBookCard key={idx} book={book} span={book.span || 3} />
@@ -98,9 +89,7 @@ export default function Home() {
               id="extras"
               className="mb-12 section-gradient rounded-2xl p-8 shadow-lg backdrop-blur-sm"
             >
-              <h2 className="text-3xl font-bold text-foreground mb-6 pb-3 border-b border-[var(--border-color)]">
-                Media Reviews
-              </h2>
+              <SectionHeading>Media Reviews</SectionHeading>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                 {content.mediaReviews.map((review, idx) => (
                   <MediaReviewCard key={idx} review={review} span={review.span || 3} />

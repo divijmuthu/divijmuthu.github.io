@@ -4,15 +4,16 @@ import { ExternalLink } from "lucide-react";
 
 interface ProjectCardProps {
   project: Project;
+  showVenue?: boolean;
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({ project, showVenue = false }: ProjectCardProps) {
   const primaryLink = project.links[0];
 
   return (
-    <div className="item-card flex flex-col lg:flex-row gap-4 p-5 mb-5 last:mb-0">
-      {/* Thumbnail - 25% on desktop */}
-      <div className="flex-shrink-0 w-full lg:w-1/4">
+    <div className="item-card flex flex-col lg:flex-row lg:items-center gap-4 p-5 mb-5 last:mb-0">
+      {/* Thumbnail - 25% on desktop, vertically centered */}
+      <div className="flex-shrink-0 w-full lg:w-1/4 flex items-center justify-center">
         {primaryLink ? (
           <a href={primaryLink.url} target="_blank" rel="noopener noreferrer" className="block group">
             <div className="relative overflow-hidden rounded-lg shadow-md group-hover:shadow-xl transition-shadow">
@@ -77,20 +78,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           })}
         </p>
 
-        {/* Links */}
-        {project.links.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-3">
-            {project.links.map((link, idx) => (
-              <a
-                key={idx}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-base text-foreground hover:opacity-80 underline"
-              >
-                [{link.name}]
-              </a>
-            ))}
+        {showVenue && project.venue && (
+          <div className="mb-2">
+            <span className="sketch-badge">{project.venue}</span>
           </div>
         )}
 
